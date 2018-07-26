@@ -8,7 +8,11 @@ For more information, see the [Yoga website](https://yogalayout.com/)
 
 
 
-MIT License
+_____
+
+
+
+# MIT License
 
 Copyright (c) 2014-present, Facebook, Inc.
 

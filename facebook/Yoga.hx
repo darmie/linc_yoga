@@ -126,11 +126,11 @@ extern class Yoga {
 	public static function nodeSetMeasureFunc(node:Node, measureFunc:MeasureFunc):Void;
 
 	@:native('YGNodeGetBaselineFunc')	
-	public static function nodeGetBaselineFunc(node:Node):BaselineFunc;
+	public static function nodeGetBaselineFunc(node:Node):BaseLineFunc;
 
 
 	@:native('YGNodeSetBaselineFunc')	
-	public static function nodeSetBaselineFunc(node:Node, baselineFunc:BaselineFunc):Void;
+	public static function nodeSetBaselineFunc(node:Node, baselineFunc:BaseLineFunc):Void;
 
 
 	@:native('YGNodeGetDirtiedFunc')	
