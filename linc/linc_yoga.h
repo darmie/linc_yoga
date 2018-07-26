@@ -14,6 +14,33 @@ namespace linc {
 
 	namespace yoga {
 
+		namespace node {
+			YGNodeRef NewYogaNode();
+			YGNodeRef NewYogaNodeWithConfig(YGConfigRef newConfig);
+		} // node
+
+
+		namespace config {
+			YGConfig NewConfig(YGLogger logger);
+		} // config
+
+		namespace style {
+			YGStyle NewStyle();
+		} // style
+
+		namespace layout {
+			YGLayout NewLayout(); 
+		} //layout
+
+		namespace floatOptional {
+			YGFloatOptional NewFloatOptional();
+			YGFloatOptional NewFloatOptionalWithValue(float value);
+		} // floatOptional
+
+		namespace cachedMeasurement {
+			YGCachedMeasurement NewCachedMeasurement();
+		} // CachedMeasurement
+
 	} //yoga
 	
 } //linc

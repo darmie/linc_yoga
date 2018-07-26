@@ -6,37 +6,20 @@ using facebook.yoga.Config;
 import facebook.yoga.Vector;
 import facebook.yoga.BaseLineFunc;
 
+
 @:keep
 @:include('linc_yoga.h')
 
 @:native('::cpp::Reference<YGNodeRef>')
 extern class NodeRef {}
 
+@:unreflective
+@:keep
+@:include('linc_yoga.h')
+//Node
+@:structAccess
 @:native('::cpp::Struct<YGNode>')
 extern class Node extends NodeRef {
-
-	public var style:Style;
-	public var layout:Layout;
-	private var lineIndex:Int;
-
-	public var parent:Node;
-	public var children:Array<Node>;
-
-	public var nextChild:Node;
-
-	public var measure:MeasureFunc;
-	public var baseline:BaseLineFunc;
-	public var print:PrintFunc;
-	public var config:Config;
-	public var context:Dynamic;
-
-	public var isDirty:Bool;
-	private var hasNewLayout:Bool;
-	public var nodeType:NodeType;
-
-	//private var resolvedDimensions:Array<Value>;
-
-
 
 	@:native('::linc::yoga::node::NewYogaNode')
 	static function init():Node;
@@ -44,183 +27,244 @@ extern class Node extends NodeRef {
 	@:native('::linc::yoga::node::NewYogaNodeWithConfig')
 	static function initWithConfig(config:Config):Node;
 
-	@:native('::YGNode::getContext')
+	@:native('getContext')
 	static function getContext():Dynamic;
 
-	@:native('::YGNode::getPrintFunc')
+	@:native('getPrintFunc')
 	static function getPrintFunc():PrintFunc;
 
-	@:native('::YGNode::getHashNewLayout')
+	@:native('getHashNewLayout')
 	static function getHashNewLayout():Bool;
 
-	@:native('::YGNode::getNodeType')
+	@:native('getNodeType')
 	static function getNodeType():NodeType;	
 
-	@:native('::YGNode::getMeasure')
+	@:native('getMeasure')
 	static function getMeasure():MeasureFunc;
 
-	@:native('::YGNode::getBaseline')
+	@:native('getBaseline')
 	static function getBaseline():BaseLineFunc;	
 
-	@:native('::YGNode::getDirtied')
+	@:native('getDirtied')
 	static function getDirtied():DirtiedFunc;
 
-	@:native('::YGNode::getStyle')
+	@:native('getStyle')
 	static function getStyle():Style;
 
-	@:native('::YGNode::getLayout')	
+	@:native('getLayout')	
 	static function getLayout():Layout;
 
-	@:native('::YGNode::getLineIndex')
+	@:native('getLineIndex')
 	static function getLineIndex():Int;
 
-	@:native('::YGNode::getOwner')
+	@:native('getOwner')
 	static function getOwner():Node;
 
-	@:native('::YGNode::getParent')
+	@:native('getParent')
 	static function getParent():Node;	
 
-	@:native('::YGNode::getChildren')
+	@:native('getChildren')
 	static function getChildren():Vector;
 
-	@:native('::YGNode::getChild')
+	@:native('getChild')
 	static function getChild(index:Int):Node;
 
-	@:native('::YGNode::getConfig')
+	@:native('getConfig')
 	static function getConfig():Config;
 
-	@:native('::YGNode::isDirty')
+	@:native('isDirty')
 	static function isDirty():Bool;
 
-	@:native('::YGNode::getResolvedDimensions')
+	@:native('getResolvedDimensions')
 	static function getResolvedDimensions():Array<Value>;
 
-	@:native('::YGNode::getResolvedDimension')
+	@:native('getResolvedDimension')
 	static function getResolvedDimension(index:Int):Value;	
 
-	@:native('::YGNode::getLeadingPosition')
+	@:native('getLeadingPosition')
 	static function getLeadingPosition(axis:FlexDirection, axisSize:Float):FloatOptional;
 
-	@:native('::YGNode::isLeadingPositionDefined')
+	@:native('isLeadingPositionDefined')
 	static function isLeadingPositionDefined(axis:FlexDirection):Bool;
 
-	@:native('::YGNode::isTrailingPosDefined')
+	@:native('isTrailingPosDefined')
 	static function isTrailingPosDefined(axis:FlexDirection):Bool;
 
-	@:native('::YGNode::getTrailingPosition')
+	@:native('getTrailingPosition')
 	static function getTrailingPosition(axis:FlexDirection, axisSize:Float):FloatOptional;
 
-	@:native('::YGNode::getLeadingMargin')
+	@:native('getLeadingMargin')
 	static function getLeadingMargin(axis:FlexDirection, widthSize:Float):FloatOptional;
 
-	@:native('::YGNode::getTrailingMargin')
+	@:native('getTrailingMargin')
 	static function getTrailingMargin(axis:FlexDirection, widthSize:Float):FloatOptional;
 
-	@:native('::YGNode::getTrailingBorder')
+	@:native('getTrailingBorder')
 	static function getTrailingBorder(flexDirection:FlexDirection):Float;	
 
-	@:native('::YGNode::getLeadingBorder')
+	@:native('getLeadingBorder')
 	static function getLeadingBorder(flexDirection:FlexDirection):Float;
 
-	@:native('::YGNode::getLeadingPadding')
+	@:native('getLeadingPadding')
 	static function getLeadingPadding(axis:FlexDirection, widthSize:Float):FloatOptional;
 
-	@:native('::YGNode::getTrailingPadding')
+	@:native('getTrailingPadding')
 	static function getTrailingPaddingr(axis:FlexDirection, widthSize:Float):FloatOptional;
 
 
-	@:native('::YGNode::getLeadingPaddingAndBorder')
+	@:native('getLeadingPaddingAndBorder')
 	static function getLeadingPaddingAndBorder(axis:FlexDirection, widthSize:Float):FloatOptional;
 
-	@:native('::YGNode::getTrailingPaddingAndBorder')
+	@:native('getTrailingPaddingAndBorder')
 	static function getTrailingPaddingAndBorder(axis:FlexDirection, widthSize:Float):FloatOptional;
 
-	@:native('::YGNode::getMarginForAxis')
+	@:native('getMarginForAxis')
 	static function getMarginForAxis(axis:FlexDirection, widthSize:Float):FloatOptional;	
 
 
-	@:native('::YGNode::setContext')
+	@:native('setContext')
 	static function setContext(context:Dynamic):Void;
 
-	@:native('::YGNode::setPrintFunc')
+	@:native('setPrintFunc')
 	static function setPrintFunc(printfunc:PrintFunc):Void;
 
-	@:native('::YGNode::setMeasureFunc')
+	@:native('setMeasureFunc')
 	static function setMeasureFunc(measurefunc:MeasureFunc):Void;	
 
-	@:native('::YGNode::setBaseLineFunc')
+	@:native('setBaseLineFunc')
 	static function setBaseLineFunc(baseLinefunc:BaseLineFunc):Void;		
 
-	@:native('::YGNode::setDirtiedFunc')
+	@:native('setDirtiedFunc')
 	static function setDirtiedFuncc(dirtiedFunc:DirtiedFunc):Void;		
 
-	@:native('::YGNode::setHasNewLayout')
+	@:native('setHasNewLayout')
 	static function setHasNewLayout(hasNewLayout:Bool):Void;
 
-	@:native('::YGNode::setNodeType')
+	@:native('setNodeType')
 	static function setsetNodeType(nodeType:NodeType):Void;
 
-	@:native('::YGNode::setStyleFlexDirection')
+	@:native('setStyleFlexDirection')
 	static function setStyleFlexDirection(direction:FlexDirection):Void;
 
-	@:native('::YGNode::setAlignContent')
+	@:native('setAlignContent')
 	static function setAlignContent(alignContent:Align):Void;	
 
-	@:native('::YGNode::setStyle')
+	@:native('setStyle')
 	static function setStyle(style:Style):Void;	
 
-	@:native('::YGNode::setLayout')
+	@:native('setLayout')
 	static function setLayout(layout:Layout):Void;
 
-	@:native('::YGNode::setLineIndex')
+	@:native('setLineIndex')
 	static function setLineIndex(lineIndex:Int):Void;
 
-	@:native('::YGNode::setOwner')
+	@:native('setOwner')
 	static function setOwner(owner:Node):Void;	
 
-	@:native('::YGNode::setChildren')
+	@:native('setChildren')
 	static function setChildren(children:Vector):Void;
 
-	@:native('::YGNode::setConfig')
+	@:native('setConfig')
 	static function setConfig(config:Config):Void;	
 
-	@:native('::YGNode::setDirty')
+	@:native('setDirty')
 	static function setDirty(isDirty:Bool):Void;
 
-	@:native('::YGNode::setLayoutLastOwnerDirection')
+	@:native('setLayoutLastOwnerDirection')
 	static function setLayoutLastOwnerDirection(direction:Direction):Void;	
 
-	@:native('::YGNode::setLayoutComputedFlexBasis')
+	@:native('setLayoutComputedFlexBasis')
 	static function setLayoutComputedFlexBasis(computedFlexBasis:FloatOptional):Void;	
 
-	@:native('::YGNode::setLayoutComputedFlexBasisGeneration')
+	@:native('setLayoutComputedFlexBasisGeneration')
 	static function setLayoutComputedFlexBasisGeneration(computedFlexBasisGeneration:Int):Void;	
 
-	@:native('::YGNode::setLayoutMeasuredDimension')
+	@:native('setLayoutMeasuredDimension')
 	static function setLayoutMeasuredDimension(measuredDimension:Float, index:Int):Void;	
 	
-	@:native('::YGNode::setLayoutHadOverflow')
+	@:native('setLayoutHadOverflow')
 	static function setLayoutHadOverflow(hadOverflow:Bool):Void;
 
-	@:native('::YGNode::setLayoutDimension')
+	@:native('setLayoutDimension')
 	static function setLayoutDimension(dimension:Float, index:Int):Void;
 
-	@:native('::YGNode::setLayoutDirection')
+	@:native('setLayoutDirection')
 	static function setLayoutDirection(direction:Direction):Void;	
 
-	@:native('::YGNode::setLayoutMargin')
+	@:native('setLayoutMargin')
 	static function setLayoutMargin(margin:Float, index:Int):Void;		
 
-	@:native('::YGNode::setLayoutBorder')
+	@:native('setLayoutBorder')
 	static function setLayoutBorder(border:Float, index:Int):Void;		
 
-	@:native('::YGNode::setLayoutPadding')
+	@:native('setLayoutPadding')
 	static function setLayoutPadding(padding:Float, index:Int):Void;
 
-	@:native('::YGNode::setLayoutPosition')
+	@:native('setLayoutPosition')
 	static function setLayoutPosition(position:Float, index:Int):Void;
 
-	@:native('::YGNode::setPosition')
-	static function setPosition(direction:Direction, mainSize:Float,  crossSize:Float, index:Int):Void;				
+	@:native('setPosition')
+	static function setPosition(direction:Direction, mainSize:Float,  crossSize:Float, index:Int):Void;	
 
-}
+	@:native('setAndPropogateUseLegacyFlag')
+	static function setAndPropogateUseLegacyFlag(useLegacyFlag:Bool):Void;
+
+	@:native('setLayoutDoesLegacyFlagAffectsLayout')
+	static function setLayoutDoesLegacyFlagAffectsLayout(doesLegacyFlagAffectsLayout:Bool):Void;
+
+	@:native('setLayoutDidUseLegacyFlag')
+	static function setLayoutDidUseLegacyFlag(didUseLegacyFlag:Bool):Void;
+
+	@:native('markDirtyAndPropogateDownwards')
+	static function markDirtyAndPropogateDownwards():Void;
+
+
+	@:native('marginLeadingValue')
+	static function marginLeadingValue(axis:FlexDirection):Value;
+
+	@:native('marginTrailingValue')
+	static function marginTrailingValue(axis:FlexDirection):Value;
+
+	@:native('resolveFlexBasisPtr')
+	static function resolveFlexBasisPtr():Value;
+
+	@:native('resolveDimension')
+	static function resolveDimension():Void;
+
+	@:native('resolveDirection')
+	static function resolveDirection(ownerDirection:Direction):Direction;
+
+	@:native('clearChildren')
+	static function clearChildren():Void;
+
+	@:native('replaceChild')
+	static function replaceChild(oldChild:Node, newChild:Node):Void;
+
+	@:native('insertChild')
+	static function insertChild(child:Node, index:Int):Void;
+
+	@:native('removeChild')
+	static function removeChild(child:Node):Void;
+
+	@:native('cloneChildrenIfNeeded')
+	static function cloneChildrenIfNeeded():Void;
+
+	@:native('markDirtyAndPropogate')
+	static function markDirtyAndPropogate():Void;
+
+	@:native('resolveFlexGrow')
+	static function resolveFlexGrow():Float;
+
+	@:native('resolveFlexShrink')
+	static function resolveFlexShrink():Float;
+
+	@:native('isNodeFlexible')
+	static function isNodeFlexible():Bool;
+
+	@:native('didUseLegacyFlag')
+	static function didUseLegacyFlag():Bool;
+
+	@:native('isLayoutTreeEqualToNode')
+	static function isLayoutTreeEqualToNode(node:Node):Bool;
+
+} //Node

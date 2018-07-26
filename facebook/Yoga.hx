@@ -11,88 +11,90 @@ using facebook.yoga.Enums;
 @:build(linc.Linc.touch())
 @:build(linc.Linc.xml('yoga'))
 #end
+
+//Yoga
 extern class Yoga {
 
 
 	#if android 
-	@:native('YGAndroidLog')
+	@:native('::YGAndroidLog')
 	public static function androidLog(config:Config, node:Node, level:LogLevel, format:String, args:Dynamic):Void;
 	#end
 
-	@:native('YGDebugLog')
+	@:native('::YGDebugLog')
 	public static function debugLog(config:Config, node:Node, level:LogLevel, format:String, args:Dynamic):Void;
 
 
-	@:native('YGFloatIsUndefined')
+	@:native('::YGFloatIsUndefined')
 	public static function floatIsUndefined(value:Float):Bool; 
 
-	@:native('YGComputedEdgeValue')
+	@:native('::YGComputedEdgeValue')
 	public static function computedEdgeValue(edges:Array<Edge>, edge:Edge, defaultValue:Value):Value;
 
 	
 	//NODE
 
-	@:native('YGNodeNew')
+	@:native('::YGNodeNew')
 	public static function newNode():Node;
 
-	@:native('YGNodeNewWithConfig')
+	@:native('::YGNodeNewWithConfig')
 	public static function newNodeWithConfig(config:Config):Node;
 	
-	@:native('YGNodeClone')
+	@:native('::YGNodeClone')
 	public static function nodeClone(node:Node):Node;
 
-	@:native('YGNodeFree')
+	@:native('::YGNodeFree')
 	public static function nodeFree(node:Node):Void;	
 
-	@:native('YGNodeFreeRecursive')
+	@:native('::YGNodeFreeRecursive')
 	public static function nodeFreeRecursive(node:Node):Void;	
 
-	@:native('YGNodeReset')
+	@:native('::YGNodeReset')
 	public static function nodeReset(node:Node):Void;
 
-	@:native('YGNodeGetInstanceCount')
+	@:native('::YGNodeGetInstanceCount')
 	public static function nodeGetInstanceCount():Int;
 
-	@:native('YGNodeInsertChild')
+	@:native('::YGNodeInsertChild')
 	public static function nodeInsertChild(node:Node, child:Node, index:Int):Void;
 
-	@:native('YGNodeInsertSharedChild')
+	@:native('::YGNodeInsertSharedChild')
 	public static function nodeInsertSharedChild(node:Node, child:Node, index:Int):Void;
 
-	@:native('YGNodeRemoveChild')
+	@:native('::YGNodeRemoveChild')
 	public static function nodeRemoveChild(node:Node, child:Node):Void;
 
-	@:native('YGNodeRemoveAllChild')
+	@:native('::YGNodeRemoveAllChild')
 	public static function nodeRemoveAllChild(node:Node):Void;	
 
-	@:native('YGNodeGetChild')
+	@:native('::YGNodeGetChild')
 	public static function nodeGetChild(node:Node, index:Int):Node;	
 
-	@:native('YGNodeGetOwner')
+	@:native('::YGNodeGetOwner')
 	public static function nodeGetOwner(node:Node):Node;	
 
-	@:native('YGNodeGetParent')
+	@:native('::YGNodeGetParent')
 	public static function nodeGetParent(node:Node):Node;
 
-	@:native('YGNodeGetChildCount')
+	@:native('::YGNodeGetChildCount')
 	public static function nodeGetChildCount(node:Node):Int;
 
-	@:native('YGNodeSetChildren')	
+	@:native('::YGNodeSetChildren')	
 	public static function nodeSetChildren(owner:Node, children:Array<Node>, count:Int):Void;
 
-	@:native('YGNodeCalculateLayout')
+	@:native('::YGNodeCalculateLayout')
 	public static function nodeCalculateLayout(node:Node, availableWidth:Float, availableHeight:Float, ownerDirection:Direction):Void;
 
-	@:native('YGNodeMarkDirty')
+	@:native('::YGNodeMarkDirty')
 	public static function nodeMarkDirty(node:Node):Void;
 
-	@:native('YGNodeMarkDirtyAndPropogateToDescendants')
+	@:native('::YGNodeMarkDirtyAndPropogateToDescendants')
 	public static function nodeMarkDirtyAndPropogateToDescendants(node:Node):Void;
 
-	@:native('YGNodePrint')
+	@:native('::YGNodePrint')
 	public static function nodePrint(node:Node, options:PrintOptions):Void;
 
-	@:native('YGNodeCanUseCachedMeasurement')
+	@:native('::YGNodeCanUseCachedMeasurement')
 	public static function nodeCanUseCachedMeasurement(
 		widthMode:MeasureMode, 
 		width:Float,
@@ -108,139 +110,139 @@ extern class Yoga {
 		marginColumn:Float,
 		config:Config):Bool;
 
-	@:native('YGNodeCopyStyle')
+	@:native('::YGNodeCopyStyle')
 	public static function nodeCopyStyle(dstNode:Node, srcNode:Node):Void;
 
 
-	@:native('YGNodeGetContext')
+	@:native('::YGNodeGetContext')
 	public static function nodeGetContext(node:Node):Dynamic;
 
-	@:native('YGNodeSetContext')
+	@:native('::YGNodeSetContext')
 	public static function nodeSetContext(node:Node, context:Dynamic):Void;
 
-	@:native('YGNodeGetMeasureFunc')	
+	@:native('::YGNodeGetMeasureFunc')	
 	public static function nodeGetMeasureFunc(node:Node):MeasureFunc;
 
 
-	@:native('YGNodeSetMeasureFunc')	
+	@:native('::YGNodeSetMeasureFunc')	
 	public static function nodeSetMeasureFunc(node:Node, measureFunc:MeasureFunc):Void;
 
-	@:native('YGNodeGetBaselineFunc')	
+	@:native('::YGNodeGetBaselineFunc')	
 	public static function nodeGetBaselineFunc(node:Node):BaseLineFunc;
 
 
-	@:native('YGNodeSetBaselineFunc')	
+	@:native('::YGNodeSetBaselineFunc')	
 	public static function nodeSetBaselineFunc(node:Node, baselineFunc:BaseLineFunc):Void;
 
 
-	@:native('YGNodeGetDirtiedFunc')	
+	@:native('::YGNodeGetDirtiedFunc')	
 	public static function nodeGetDirtiedFunc(node:Node):DirtiedFunc;
 
 
-	@:native('YGNodeSeDirtiedFunc')	
+	@:native('::YGNodeSeDirtiedFunc')	
 	public static function nodeSetDirtiedFunc(node:Node, dirtiedFunc:DirtiedFunc):Void;
 
-	@:native('YGNodeGetHasNewLayout')
+	@:native('::YGNodeGetHasNewLayout')
 	public static function nodeGetHasNewLayout(node:Node):Bool;
 
-	@:native('YGNodeSetHasNewLayout')
+	@:native('::YGNodeSetHasNewLayout')
 	public static function nodeSetHasNewLayout(node:Node, hasNewLayout:Bool):Void;	
 
-	@:native('YGNodeGetNodeType')
+	@:native('::YGNodeGetNodeType')
 	public static function nodeGetNodeType(node:Node):NodeType;
 
-	@:native('YGNodeSetNodeType')
+	@:native('::YGNodeSetNodeType')
 	public static function nodeSetNodeType(node:Node, nodeType:NodeType):Void;
 
-	@:native('YGNodeIsDirty')
+	@:native('::YGNodeIsDirty')
 	public static function nodeIsDirty(node:Node):Bool;
 
-	@:native('YGNodeLayoutGetDidUseLegacyFlag')
+	@:native('::YGNodeLayoutGetDidUseLegacyFlag')
 	public static function nodeLayoutGetDidUseLegacyFlag(node:Node):Bool;
 
-	@:native('YGNodeLayoutGetDidLegacyStretchFlagAffectLayout')
+	@:native('::YGNodeLayoutGetDidLegacyStretchFlagAffectLayout')
 	public static function nodeLayoutGetDidLegacyStretchFlagAffectLayout(node:Node):Bool;
 
 
-	@:native('YGConfigSetLogger')
+	@:native('::YGConfigSetLogger')
 	public static function configSetLogger(config:Config, logger:Logger):Void;
 
-	@:native('YGLog')
+	@:native('::YGLog')
 	public static function log(node:Node, level:LogLevel, message:String, args:Dynamic):Void;
 
-	@:native('YGLogWithConfig')
+	@:native('::YGLogWithConfig')
 	public static function logWithConfig(config:Config, level:LogLevel, format:String, args:Dynamic):Void;
 
-	@:native('YGAssert')
+	@:native('::YGAssert')
 	public static function assert(condition:Bool, message:String):Void;
 
-	@:native('YGAssertWithNode')
+	@:native('::YGAssertWithNode')
 	public static function assertWithNode(node:Node, condition:Bool, message:String):Void;
 
-	@:native('YGAssertWithConfig')
+	@:native('::YGAssertWithConfig')
 	public static function assertWithConfig(config:Config, condition:Bool, message:String):Void;
 
-	@:native('YGConfigSetPointScaleFactor')
+	@:native('::YGConfigSetPointScaleFactor')
 	public static function configSetPointScaleFactor(config:Config, pixelIsPoint:Float):Void;
 
-	@:native('YGConfigSetShouldDiffLayoutWithoutLegacyStretchBehaviour')	
+	@:native('::YGConfigSetShouldDiffLayoutWithoutLegacyStretchBehaviour')	
 	public static function configSetShouldDiffLayoutWithoutLegacyStretchBehaviour(config:Config, shouldDiffLayout:Bool):Void;
 
-	@:native('YGConfigSetUseLegacyStretchBehaviour')
+	@:native('::YGConfigSetUseLegacyStretchBehaviour')
 	public static function configSetUseLegacyStretchBehaviour(config:Config, useLegacyStretchBehaviour:Bool):Void;
 
 
 	//CONFIG
 
-	@:native('YGConfigNew')
+	@:native('::YGConfigNew')
 	public static function newConfig():Config;
 
-	@:native('YGConfigFree')
+	@:native('::YGConfigFree')
 	public static function configFree(config:Config):Void;
 
-	@:native('YGConfigCopy')
+	@:native('::YGConfigCopy')
 	public static function configCopy(dest:Config, src:Config):Void;
 
-	@:native('YGConfigGetInstanceCount')
+	@:native('::YGConfigGetInstanceCount')
 	public static function configGetInstanceCount():Int;
 
-	@:native('YGConfigSetExperimentalFeatureEnabled')
+	@:native('::YGConfigSetExperimentalFeatureEnabled')
 	public static function configSetExperimentalFeatureEnabled(config:Config, feature:ExperimentalFeature, enabled:Bool):Bool;
 
-	@:native('YGConfigSetUseWebDefaults')
+	@:native('::YGConfigSetUseWebDefaults')
 	public static function configSetUseWebDefaults(config:Config, enabled:Bool):Void;
 
-	@:native('YGConfigGetUseWebDefaults')
+	@:native('::YGConfigGetUseWebDefaults')
 	public static function configGetUseWebDefaults(config:Config):Bool;
 
-	@:native('YGConfigSetCloneNodeFunc')
+	@:native('::YGConfigSetCloneNodeFunc')
 	public static function configSetCloneNodeFunc(config:Config, context:Dynamic):Void;
 
 	#if cs
-	@:native('YGConfigGetDefault')
+	@:native('::YGConfigGetDefault')
 	public static function configGetDefault():Config;
 	#end
 
-	@:native('YGConfigSetContext')
+	@:native('::YGConfigSetContext')
 	public static function configSetContext(config:Config, context:Dynamic):Void;
 
-	@:native('YGConfigGetContext')
+	@:native('::YGConfigGetContext')
 	public static function configGetContext(config:Config):Bool;
 
-	@:native('YGRoundValueToPixelGrid')
+	@:native('::YGRoundValueToPixelGrid')
 	public static function roundValueToPixelGrid(value:Float, pointScaleFactor:Float, forceCell:Bool, forceFloor:Bool):Float;
 
-	@:native('YGTraversePreOrder')
+	@:native('::YGTraversePreOrder')
 	public static function traversePreOrder(node:Node, f:cpp.Callable<Node->Void>):Void;
 
 
 
 	//internal 
 
-	@:native('YGValueEqual')
+	@:native('::YGValueEqual')
 	public static function valueEqual(a:Value, b:Value):Bool;
 
-	@:native('YGValueArrayEqual')
+	@:native('::YGValueArrayEqual')
 	public static function valueArrayEqual(val1:Array<Value>, val2:Array<Value>):Bool;
 
 	

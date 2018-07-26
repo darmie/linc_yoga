@@ -2,13 +2,31 @@ package facebook.yoga;
 
 using facebook.yoga.Enums;
 
+@:keep
+@:include('linc_yoga.h')
+@:unreflective
+@:structAccess
+@:native('::YGCachedMeasurement')
 // CachedMeasurement describes measurements
-typedef CachedMeasurement = {
-	var availableWidth:Float;
-	var availableHeight:Float;
-	var widthMeasureMode:MeasureMode;
-	var heightMeasureMode:MeasureMode;
+extern class CachedMeasurement  {
+	@:native('availableWidth')
+	public var availableWidth:Float;
 
-	var computedWidth:Float;
-	var computedHeight:Float;
+	@:native('availableHeight')
+	public var availableHeight:Float;
+
+	@:native('widthMeasureMode')
+	public var widthMeasureMode:MeasureMode;
+	
+	@:native('heightMeasureMode')
+	public var heightMeasureMode:MeasureMode;
+
+	@:native('computedWidth')
+	public var computedWidth:Float;
+
+	@:native('computedHeight')
+	public var computedHeight:Float;
+
+	@:native('::linc::yoga::cachedMeasurement::NewCachedMeasurement')
+	static function init():CachedMeasurement;
 }
