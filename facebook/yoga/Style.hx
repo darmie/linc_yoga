@@ -35,7 +35,7 @@ extern class Style {
 	public var flexWrap:Wrap;
 
 	@:native('overflow')
-	public var overflow:Overflow
+	public var overflow:Overflow;
 
 	@:native('display')
 	public var display:Display;
