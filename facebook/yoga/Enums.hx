@@ -470,7 +470,7 @@ class Enums {
 		case Edge.Left:
 			return "left";
 		case Edge.Top:
-			return "top"
+			return "top";
 		case Edge.Right:
 			return "right";
 		case Edge.Bottom:
