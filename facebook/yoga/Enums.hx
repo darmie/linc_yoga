@@ -404,250 +404,176 @@ class Enums {
 
 	// AlignToString returns string version of Align enum
 	public static inline function  alignToString(value:Align):String {
-		switch value {
-		case Align.Auto:
-			return "auto";
-		case Align.FlexStart:
-			return "flex-start";
-		case Align.Center:
-			return "center";
-		case Align.FlexEnd:
-			return "flex-end";
-		case Align.Stretch:
-			return "stretch";
-		case Align.Baseline:
-			return "baseline";
-		case Align.SpaceBetween:
-			return "space-between";
-		case Align.SpaceAround:
-			return "space-around";
-		default:
-			return "unknown";
+		return switch value {
+			case Align.Auto: "auto";
+			case Align.FlexStart: "flex-start";
+			case Align.Center: "center";
+			case Align.FlexEnd: "flex-end";
+			case Align.Stretch: "stretch";
+			case Align.Baseline: "baseline";
+			case Align.SpaceBetween: "space-between";
+			case Align.SpaceAround: "space-around";
+			default: "unknown";
 		}
 	}	
 
 	// DimensionToString returns string version of Dimension enum
 	public static inline function dimensionToString(value:Dimension):String {
-		switch value {
-		case Dimension.Width:
-			return "width";
-		case Dimension.Height:
-			return "height";
-		default:
-			return "unknown";
+		return switch value {
+			case Dimension.Width: "width";
+			case Dimension.Height: "height";
+			default: "unknown";
 		}
 	}
 
 	// DirectionToString returns string version of Direction enum
 	public static inline function directionToString(value:Direction):String {
-		switch value {
-		case Direction.Inherit:
-			return "inherit";
-		case Direction.LTR:
-			return "ltr";
-		case Direction.RTL:
-			return "rtl";
-		default:
-			return "unknown";
+		return switch value {
+			case Direction.Inherit: "inherit";
+			case Direction.LTR: "ltr";
+			case Direction.RTL: "rtl";
+			default: "unknown";
 		}	
 	}
 
 	// DisplayToString returns string version of Display enum
 	public static inline function displayToString(value:Display):String {
-		switch value {
-		case Display.Flex:
-			return "flex";
-		case Display.None:
-			return "none";
-		default:
-			return "unknown";
+		return switch value {
+			case Display.Flex: "flex";
+			case Display.None: "none";
+			default: "unknown";
 		}	
 	}	
 
 	// EdgeToString returns string version of Edge enum
 	public static inline function edgeToString(value:Edge):String {
-		switch value {
-		case Edge.Left:
-			return "left";
-		case Edge.Top:
-			return "top";
-		case Edge.Right:
-			return "right";
-		case Edge.Bottom:
-			return "bottom";
-		case Edge.Start:
-			return "start";
-		case Edge.End:
-			return "end";
-		case Edge.Horizontal:
-			return "horizontal";
-		case Edge.Vertical:
-			return "vertical";
-		case Edge.All:
-			return "all";
-		default:
-			return "unknown";
+		return switch value {
+			case Edge.Left: "left";
+			case Edge.Top: "top";
+			case Edge.Right: "right";
+			case Edge.Bottom: "bottom";
+			case Edge.Start: "start";
+			case Edge.End: "end";
+			case Edge.Horizontal: "horizontal";
+			case Edge.Vertical: "vertical";
+			case Edge.All: "all";
+			default: "unknown";
 		}	
 	}
 
 
 	// ExperimentalFeatureToString returns string version of ExperimentalFeature enum
 	public static inline function experimentalFeatureToString(value:ExperimentalFeature):String {
-		switch value {
-		case ExperimentalFeature.WebFlexBasis:
-			return "web-flex-basis";
-		default: 
-			return "unknown";
+		return switch value {
+			case ExperimentalFeature.WebFlexBasis: "web-flex-basis";
+			default: "unknown";
 		}
 		
 	}	
 
 	// FlexDirectionToString returns string version of FlexDirection enum
 	public static inline function flexDirectionToString(value:FlexDirection):String {
-		switch value {
-		case FlexDirection.Column:
-			return "column";
-		case FlexDirection.ColumnReverse:
-			return "column-reverse";
-		case FlexDirection.Row:
-			return "row";
-		case FlexDirection.RowReverse:
-			return "row-reverse";
-		default:
-			return "unknown";
+		return switch value {
+			case FlexDirection.Column: "column";
+			case FlexDirection.ColumnReverse: "column-reverse";
+			case FlexDirection.Row: "row";
+			case FlexDirection.RowReverse: "row-reverse";
+			default: "unknown";
 		}	
 	}
 
 	// JustifyToString returns string version of Justify enum
 	public static inline function justifyToString(value:Justify):String {
-		switch value {
-		case Justify.FlexStart:
-			return "flex-start";
-		case Justify.Center:
-			return "center";
-		case Justify.FlexEnd:
-			return "flex-end";
-		case Justify.SpaceBetween:
-			return "space-between";
-		case Justify.SpaceAround:
-			return "space-around";
-		default: 
-			return "unknown";
-		}
-		
+		return switch value {
+			case Justify.FlexStart: "flex-start";
+			case Justify.Center: "center";
+			case Justify.FlexEnd: "flex-end";
+			case Justify.SpaceBetween: "space-between";
+			case Justify.SpaceAround: "space-around";
+			default: "unknown";
+		}		
 	}
 
 	// LogLevelToString returns string version of LogLevel enum
 	public static inline function logLevelToString(value:LogLevel):String {
-		switch value {
-		case LogLevel.Error:
-			return "error";
-		case LogLevel.Warn:
-			return "warn";
-		case LogLevel.Info:
-			return "info";
-		case LogLevel.Debug:
-			return "debug";
-		case LogLevel.Verbose:
-			return "verbose";
-		case LogLevel.Fatal:
-			return "fatal";
-		default:
-			return "unknown";
+		return switch value {
+			case LogLevel.Error: "error";
+			case LogLevel.Warn: "warn";
+			case LogLevel.Info: "info";
+			case LogLevel.Debug: "debug";
+			case LogLevel.Verbose: "verbose";
+			case LogLevel.Fatal: "fatal";
+			default: "unknown";
 		}	
 	}
 
 	// MeasureModeToString returns string version of MeasureMode enum
 	public static inline function measureModeToString(value:MeasureMode):String {
-		switch value {
-		case MeasureMode.Undefined:
-			return "undefined";
-		case MeasureMode.Exactly:
-			return "exactly";
-		case MeasureMode.AtMost:
-			return "at-most";
-		default:
-			return "unknown";
+		return switch value {
+			case MeasureMode.Undefined: "undefined";
+			case MeasureMode.Exactly: "exactly";
+			case MeasureMode.AtMost: "at-most";
+			default: "unknown";
 		}	
 	}
 
 
 	// NodeTypeToString returns string version of NodeType enum
 	public static inline function nodeTypeToString(value:NodeType):String {
-		switch value {
-		case NodeType.Default:
-			return "default";
-		case  NodeType.Text:
-			return "text";
-		default: 
-			return "unknown";
+		return switch value {
+			case NodeType.Default: "default";
+			case NodeType.Text: "text";
+			default: "unknown";
 		}
 	}
 
 	// OverflowToString returns string version of Overflow enum
 	public static inline function overflowToString(value:Overflow):String {
-		switch value {
-		case Overflow.Visible:
-			return "visible";
-		case Overflow.Hidden:
-			return "hidden";
-		case Overflow.Scroll:
-			return "scroll";
-		default: return "unknown";
+		return switch value {
+			case Overflow.Visible: "visible";
+			case Overflow.Hidden: "hidden";
+			case Overflow.Scroll: "scroll";
+			default: "unknown";
 		}
 	}
 
 	// PositionTypeToString returns string version of PositionType enum
 	public static inline function positionTypeToString(value:PositionType):String {
-		switch value {
-		case PositionType.Relative:
-			return "relative";
-		case PositionType.Absolute:
-			return "absolute";
-		default: return "unknown";
+		return switch value {
+			case PositionType.Relative: "relative";
+			case PositionType.Absolute: "absolute";
+			default: "unknown";
 		}
 	}
 
 	// PrintOptionsToString returns string version of PrintOptions enum
 	public static inline function printOptionsToString(value:PrintOptions):String {
-		switch value {
-		case PrintOptions.Layout:
-			return "layout";
-		case PrintOptions.Style:
-			return "style";
-		case PrintOptions.Children:
-			return "children";
-		default: return "unknown";
-		}
-		
+		return switch value {
+			case PrintOptions.Layout: "layout";
+			case PrintOptions.Style: "style";
+			case PrintOptions.Children: "children";
+			default: "unknown";
+		}		
 	}
 
 	// UnitToString returns string version of Unit enum
 	public static inline function unitToString(value:Unit):String {
-		switch value {
-		case Unit.Undefined:
-			return "undefined";
-		case Unit.Point:
-			return "point";
-		case Unit.Percent:
-			return "percent";
-		case Unit.Auto:
-			return "auto";
-		default: return "unknown";
+		return switch value {
+			case Unit.Undefined: "undefined";
+			case Unit.Point: "point";
+			case Unit.Percent: "percent";
+			case Unit.Auto: "auto";
+			default: "unknown";
 		}	
 	}
 
 	// WrapToString returns string version of Wrap enum
 	public static inline function wrapToString(value:Wrap):String {
-		switch value {
-		case Wrap.NoWrap:
-			return "no-wrap";
-		case Wrap.Wrap:
-			return "wrap";
-		case Wrap.WrapReverse:
-			return "wrap-reverse";
-		default: return "unknown";
-		}
-		
+		return switch value {
+			case Wrap.NoWrap: "no-wrap";
+			case Wrap.Wrap: "wrap";
+			case Wrap.WrapReverse: "wrap-reverse";
+			default: "unknown";
+		}		
 	}	
 }
