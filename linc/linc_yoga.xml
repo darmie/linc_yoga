@@ -1,6 +1,5 @@
 <xml>
 	<set name="NATIVE_TOOLKIT_PATH" value="${LINC_YOGA_PATH}/lib/" />
-	<include name="${LINC_YOGA_PATH}/lib/yoga/"/>
 
 	<set name="ANDROID" value="1" if="android"/>
 
