@@ -378,7 +378,7 @@ abstract Wrap(Int) from Int to Int {
 	inline static public function fromNative(value:YGWrap) return new Wrap(untyped value);
 
 	public static var NoWrap (default, never) = new Wrap(untyped __cpp__("YGWrapNoWrap"));
-	public static var Wrap (default, never) = new Wrap(untyped __cpp__("YGWrapWrapWrap"));
+	public static var Wrap (default, never) = new Wrap(untyped __cpp__("YGWrapWrap"));
 	public static var WrapReverse (default, never) = new Wrap(untyped __cpp__("YGWrapWrapReverse"));
 }
 
