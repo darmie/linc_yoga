@@ -153,7 +153,7 @@ abstract ExperimentalFeature(Int) from Int to Int{
 	@:unreflective
 	inline static public function fromNative(value:YGExperimentalFeature) return new ExperimentalFeature(untyped value);
 
-	public static var WebFlexBasis(default, never) = new ExperimentalFeature(untyped __cpp__("YGExperimentalFeature"));
+	public static var WebFlexBasis(default, never) = new ExperimentalFeature(untyped __cpp__("YGExperimentalFeatureWebFlexBasis"));
 }
 
 @:keep
@@ -183,7 +183,7 @@ abstract FlexDirection(Int) from Int to Int {
 @:unreflective
 @:include('linc_yoga.h')
 
-@:native("YGJustify")
+@:native("::YGJustify")
 extern class YGJustify { }
 abstract Justify(Int) from Int to Int {
 	inline public function new(i:Int) { this = i; }
@@ -207,7 +207,7 @@ abstract Justify(Int) from Int to Int {
 @:unreflective
 @:include('linc_yoga.h')
 
-@:native("YGLogLevel")
+@:native("::YGLogLevel")
 extern class YGLogLevel { }
 abstract LogLevel(Int) from Int to Int {
 	inline public function new(i:Int) { this = i; }
@@ -232,7 +232,7 @@ abstract LogLevel(Int) from Int to Int {
 @:unreflective
 @:include('linc_yoga.h')
 
-@:native("YGMeasureMode")
+@:native("::YGMeasureMode")
 extern class YGMeasureMode { }
 abstract MeasureMode(Int) from Int to Int {
 	inline public function new(i:Int) { this = i; }
@@ -254,7 +254,7 @@ abstract MeasureMode(Int) from Int to Int {
 @:unreflective
 @:include('linc_yoga.h')
 
-@:native("YGNodeType")
+@:native("::YGNodeType")
 extern class YGNodeType { }
 abstract NodeType(Int) from Int to Int {
 	inline public function new(i:Int) { this = i; }
@@ -275,7 +275,7 @@ abstract NodeType(Int) from Int to Int {
 @:unreflective
 @:include('linc_yoga.h')
 
-@:native("YGOverflow")
+@:native("::YGOverflow")
 extern class YGOverflow { }
 abstract Overflow(Int) from Int to Int {
 
@@ -298,7 +298,7 @@ abstract Overflow(Int) from Int to Int {
 @:unreflective
 @:include('linc_yoga.h')
 
-@:native("YGPositionType")
+@:native("::YGPositionType")
 extern class YGPositionType { }
 abstract PositionType(Int) from Int to Int {
 	inline public function new(i:Int) { this = i; }
@@ -319,7 +319,7 @@ abstract PositionType(Int) from Int to Int {
 @:unreflective
 @:include('linc_yoga.h')
 
-@:native("YGPrintOptions")
+@:native("::YGPrintOptions")
 extern class YGPrintOptions { }
 abstract PrintOptions(Int) from Int to Int {
 	inline public function new(i:Int) { this = i; }
@@ -341,7 +341,7 @@ abstract PrintOptions(Int) from Int to Int {
 @:unreflective
 @:include('linc_yoga.h')
 
-@:native("YGUnit")
+@:native("::YGUnit")
 extern class YGUnit { }
 abstract Unit(Int) from Int to Int {
 	inline public function new(i:Int) { this = i; }
@@ -364,7 +364,7 @@ abstract Unit(Int) from Int to Int {
 @:unreflective
 @:include('linc_yoga.h')
 
-@:native("YGWrap")
+@:native("::YGWrap")
 extern class YGWrap { }
 abstract Wrap(Int) from Int to Int {
 	inline public function new(i:Int) { this = i; }
@@ -378,7 +378,7 @@ abstract Wrap(Int) from Int to Int {
 	inline static public function fromNative(value:YGWrap) return new Wrap(untyped value);
 
 	public static var NoWrap (default, never) = new Wrap(untyped __cpp__("YGWrapNoWrap"));
-	public static var Wrap (default, never) = new Wrap(untyped __cpp__("YGWrapWrapWrap"));
+	public static var Wrap (default, never) = new Wrap(untyped __cpp__("YGWrapWrap"));
 	public static var WrapReverse (default, never) = new Wrap(untyped __cpp__("YGWrapWrapReverse"));
 }
 
@@ -470,7 +470,7 @@ class Enums {
 		case Edge.Left:
 			return "left";
 		case Edge.Top:
-			return "top"
+			return "top";
 		case Edge.Right:
 			return "right";
 		case Edge.Bottom:

@@ -6,7 +6,7 @@ using facebook.yoga.Enums;
 @:keep
 @:include('linc_yoga.h')
 //Style
-@:structAccess
+//@:structAccess
 @:native('::YGStyle')
 extern class Style {
 

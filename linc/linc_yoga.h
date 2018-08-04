@@ -4,7 +4,6 @@
 #include <hxcpp.h>
 #endif
 
-
 #include "../lib/yoga/YGEnums.h"
 #include "../lib/yoga/YGNode.h"
 #include "../lib/yoga/Yoga.h"
@@ -21,7 +20,7 @@ namespace linc {
 
 
 		namespace config {
-			YGConfig NewConfig(YGLogger logger);
+			YGConfigRef NewConfig(int logger);
 		} // config
 
 		namespace style {

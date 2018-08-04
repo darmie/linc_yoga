@@ -2,12 +2,15 @@ package facebook.yoga;
 
 using facebook.yoga.Enums;
 
+
+
 @:unreflective
 @:keep
 @:include('linc_yoga.h')
+
 //Layout
 @:structAccess
-@:native('::YGLayout')
+@:native('::cpp::Struct<YGLayout>')
 extern class Layout {
 	@:native('position')
 	public var position:Array<Float>;

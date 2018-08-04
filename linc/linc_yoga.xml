@@ -1,12 +1,17 @@
 <xml>
 	<set name="NATIVE_TOOLKIT_PATH" value="${LINC_YOGA_PATH}/lib/" />
-	<include name="${LINC_YOGA_PATH}/lib/yoga/"/>
-
 	<set name="ANDROID" value="1" if="android"/>
 
 	<files id='haxe'>
 	    <compilerflag value='-I${LINC_YOGA_PATH}/linc/'/>
         <compilerflag value='-I${LINC_YOGA_PATH}/lib/yoga/'/>
 		<file name='${LINC_YOGA_PATH}/linc/linc_yoga.cpp' />
+		<compilerflag value='-Wall' />
+	</files>
+
+	<files id="__main__">
+		<compilerflag value='-I${LINC_YOGA_PATH}/linc/'/>
+        <compilerflag value='-I${LINC_YOGA_PATH}/lib/yoga/'/>
+		<compilerflag value='-Wall' />
 	</files>
 </xml>

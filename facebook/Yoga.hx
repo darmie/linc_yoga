@@ -165,7 +165,7 @@ extern class Yoga {
 
 
 	@:native('::YGConfigSetLogger')
-	public static function configSetLogger(config:Config, logger:Logger):Void;
+	public static function configSetLogger(config:Config, logger:Dynamic):Void;
 
 	@:native('::YGLog')
 	public static function log(node:Node, level:LogLevel, message:String, args:Dynamic):Void;

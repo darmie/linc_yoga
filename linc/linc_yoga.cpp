@@ -19,35 +19,35 @@ namespace linc {
 
 
 		namespace config {
-			YGConfig NewConfig(YGLogger logger) {
-				return new YGConfig(logger);
+			YGConfigRef NewConfig(int logger) {
+				return new YGConfig((YGLogger)logger);
 			}
 		} // config
 
 		namespace style {
 			YGStyle NewStyle() {
-				return new YGStyle();
+				return YGStyle();
 			}
 		} // style
 
 		namespace layout {
 			YGLayout NewLayout() {
-				return new YGLayout();
+				return YGLayout();
 			} //layout
 		}
 
 		namespace floatOptional {
 			YGFloatOptional NewFloatOptional() {
-				return new YGFloatOptional();
+				return YGFloatOptional();
 			}
 			YGFloatOptional NewFloatOptionalWithValue(float value){
-				return new YGFloatOptional(value);
+				return YGFloatOptional(value);
 			}
 		} // floatOptional	
 
 		namespace cachedMeasurement {
 			YGCachedMeasurement NewCachedMeasurement() {
-				return new YGCachedMeasurement();
+				return YGCachedMeasurement();
 			}
 		} // CachedMeasurement			
 
