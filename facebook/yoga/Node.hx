@@ -109,7 +109,7 @@ extern class Node extends NodeRef {
 	static function getLeadingPadding(axis:FlexDirection, widthSize:Float):FloatOptional;
 
 	@:native('getTrailingPadding')
-	static function getTrailingPaddingr(axis:FlexDirection, widthSize:Float):FloatOptional;
+	static function getTrailingPadding(axis:FlexDirection, widthSize:Float):FloatOptional;
 
 
 	@:native('getLeadingPaddingAndBorder')
@@ -135,13 +135,13 @@ extern class Node extends NodeRef {
 	static function setBaseLineFunc(baseLinefunc:BaseLineFunc):Void;		
 
 	@:native('setDirtiedFunc')
-	static function setDirtiedFuncc(dirtiedFunc:DirtiedFunc):Void;		
+	static function setDirtiedFunc(dirtiedFunc:DirtiedFunc):Void;		
 
 	@:native('setHasNewLayout')
 	static function setHasNewLayout(hasNewLayout:Bool):Void;
 
 	@:native('setNodeType')
-	static function setsetNodeType(nodeType:NodeType):Void;
+	static function setNodeType(nodeType:NodeType):Void;
 
 	@:native('setStyleFlexDirection')
 	static function setStyleFlexDirection(direction:FlexDirection):Void;

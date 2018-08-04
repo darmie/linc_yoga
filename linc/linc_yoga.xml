@@ -1,5 +1,6 @@
 <xml>
 	<set name="NATIVE_TOOLKIT_PATH" value="${LINC_YOGA_PATH}/lib/" />
+
 	<set name="ANDROID" value="1" if="android"/>
 
 	<files id='haxe'>
