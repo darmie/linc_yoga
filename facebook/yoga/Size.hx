@@ -1,7 +1,7 @@
 package facebook.yoga;
 
 @:unreflective
-@:keep
+
 @:include('linc_yoga.h')
 //Node
 @:structAccess

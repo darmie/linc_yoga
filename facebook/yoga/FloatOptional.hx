@@ -1,16 +1,16 @@
 package facebook.yoga;
 
-@:keep
+
 @:include('linc_yoga.h')
 @:unreflective
 @:structAccess
 @:native('::YGFloatOptional')
 extern class FloatOptional {
 	
-	@:native('::linc::yoga::floatOptional:NewFloatOptional')
+	@:native('::linc::yoga::NewFloatOptional')
 	static function init():FloatOptional;
 
-	@:native('::linc::yoga::floatOptional:NewFloatOptionalWithValue')
+	@:native('::linc::yoga::NewFloatOptionalWithValue')
 	static function initWithValue(value:Float):FloatOptional;	
 
 	@:native('getValue')

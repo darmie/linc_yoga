@@ -4,13 +4,12 @@ using facebook.yoga.Enums;
 
 
 
-@:unreflective
-@:keep
-@:include('linc_yoga.h')
 
-//Layout
+
+@:include('linc_yoga.h')
 @:structAccess
-@:native('::cpp::Struct<YGLayout>')
+//Layout
+@:native('::YGLayout')
 extern class Layout {
 	@:native('position')
 	public var position:Array<Float>;
@@ -59,6 +58,6 @@ extern class Layout {
 	@:native('cachedLayout')
 	public var cachedLayout:CachedMeasurement;
 
-	@:native('::linc::yoga::layout::NewLayout')
-	public function init():Layout;
+	@:native('::linc::yoga::NewLayout')
+	static function init():Layout;
 }

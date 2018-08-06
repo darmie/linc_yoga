@@ -1,385 +1,266 @@
 package facebook.yoga;
 
-@:keep
+
 @:unreflective
-@:include('linc_yoga.h')
+@:include('YGEnums.h')
+@:native("YGAlign")
+extern class YGAlign { }
 /**
  * Align describes align flex attribute
  */
 
-@:native("YGAlign")
-extern class YGAlign { }
-
-abstract Align(Int) from Int to Int {
-	inline public function new(i:Int) { this = i; }
-
-	@:to(YGAlign)
-	@:unreflective
-	inline public function toNative() return untyped __cpp__("((YGAlign)({0}))", this);
-
-	@:from(YGAlign)
-	@:unreflective
-	inline static public function fromNative(value:YGAlign) return new Align(untyped value);
-
-	public static var Auto (default, never) = new Align(untyped __cpp__("YGAlignAuto"));
-	public static var FlexStart (default, never) = new Align(untyped __cpp__("YGAlignFlexStart"));
-	public static var Center (default, never) = new Align(untyped __cpp__("YGAlignCenter"));
-	public static var FlexEnd (default, never) = new Align(untyped __cpp__("YGAlignFlexEnd"));
-	public static var Stretch (default, never) = new Align(untyped __cpp__("YGAlignStretch"));
-	public static var Baseline (default, never) = new Align(untyped __cpp__("YGAlignBaseline"));
-	public static var SpaceBetween (default, never) = new Align(untyped __cpp__("YGAlignSpaceBetween"));
-	public static var SpaceAround (default, never) = new Align(untyped __cpp__("YGAlignSpaceAround"));
+@:unreflective
+@:include('YGEnums.h')
+@:enum extern abstract Align(YGAlign) {
+	@:native("YGAlignAuto") var Auto;
+	@:native("YGAlignFlexStart") var FlexStart;
+	@:native("YGAlignCenter") var Center;
+	@:native("YGAlignFlexEnd") var FlexEnd;
+	@:native("YGAlignStretch") var Stretch;
+	@:native("YGAlignBaseline") var Baseline;
+	@:native("YGAlignSpaceBetween") var SpaceBetween;
+	@:native("YGAlignSpaceAround") var SpaceAround;
 }
 
 
-@:keep
-@:unreflective
-@:include('linc_yoga.h')
 
+@:unreflective
+@:include('YGEnums.h')
 @:native("YGDimension")
 extern class YGDimension { }
-abstract Dimension(Int) from Int to Int {
-	inline public function new(i:Int) { this = i; }
 
-	@:to(YGDimension)
-	@:unreflective
-	inline public function toNative() return untyped __cpp__("((YGDimension)({0}))", this);
 
-	@:from(YGDimension)
-	@:unreflective
-	inline static public function fromNative(value:YGDimension) return new Dimension(untyped value);
-
-	public static var Width (default, never) = new Dimension(untyped __cpp__("YGDimensionWidth"));
-	public static var Height (default, never) = new Dimension(untyped __cpp__("YGDimensionHeight"));
+@:unreflective
+@:include('YGEnums.h')
+@:enum extern abstract Dimension(YGDimension) {
+	@:native("YGDimensionWidth") var Width;
+	@:native("YGDimensionHeight") var Height;
 }
 
 
-@:keep
-@:unreflective
-@:include('linc_yoga.h')
 
+@:unreflective
+@:include('YGEnums.h')
 @:native("YGDirection")
 extern class YGDirection { }
 /**
  * Direction represents right-to-left or left-to-right direction
  */
-abstract Direction(Int) from Int to Int {
-	inline public function new(i:Int) { this = i; }
 
-	@:to(YGDirection)
-	@:unreflective
-	inline public function toNative() return untyped __cpp__("((YGDirection)({0}))", this);
-
-	@:from(YGDirection)
-	@:unreflective
-	inline static public function fromNative(value:YGDirection) return new Direction(untyped value);
-
-	public static var Inherit(default, never) = new Direction(untyped __cpp__("YGDirectionInherit"));
-	public static var LTR(default, never) = new Direction(untyped __cpp__("YGDirectionLTR"));
-	public static var RTL(default, never) = new Direction(untyped __cpp__("YGDirectionRTL"));
+@:unreflective
+@:include('YGEnums.h')
+@:enum extern abstract Direction(YGDirection) {
+	@:native("YGDirectionInherit") var Inherit;
+	@:native("YGDirectionLTR") var LTR;
+	@:native("YGDirectionRTL") var RTL;
 }
 
 
-@:keep
-@:unreflective
-@:include('linc_yoga.h')
 
+@:unreflective
+@:include('YGEnums.h')
 @:native("YGDisplay")
 extern class YGDisplay { }
 /**
  * `display` property
  */
-abstract  Display(Int) from Int to Int {
-	inline public function new(i:Int) { this = i; }
 
-	@:to(YGDisplay)
-	@:unreflective
-	inline public function toNative() return untyped __cpp__("((YGDisplay)({0}))", this);
-
-	@:from(YGDisplay)
-	@:unreflective
-	inline static public function fromNative(value:YGDisplay) return new Display(untyped value);
-
-	public static var Flex(default, never) = new Display(untyped __cpp__("YGDisplayFlex"));
-	public static var None(default, never) = new Display(untyped __cpp__("YGDisplayNone"));
+@:unreflective
+@:include('YGEnums.h')
+@:enum extern abstract  Display(YGDisplay) {
+	@:native("YGDisplayFlex") var Flex;
+	@:native("YGDisplayNone") var None;
 }
 
 
-@:keep
-@:unreflective
-@:include('linc_yoga.h')
 
+@:unreflective
+@:include('YGEnums.h')
 @:native("YGEdge")
 extern class YGEdge { }
-abstract Edge(Int) from Int to Int {
-	inline public function new(i:Int) { this = i; }
-
-	@:to(YGEdge)
-	@:unreflective
-	inline public function toNative() return untyped __cpp__("((YGEdge)({0}))", this);
-
-	@:from(YGEdge)
-	@:unreflective
-	inline static public function fromNative(value:YGEdge) return new Edge(untyped value);
 
 
-	public static var Left(default, never) = new Edge(untyped __cpp__("YGEdgeLeft"));
-	public static var Top(default, never) = new Edge(untyped __cpp__("YGEdgeTop"));
-	public static var Right(default, never) = new Edge(untyped __cpp__("YGEdgeRight"));
-	public static var Bottom(default, never) = new Edge(untyped __cpp__("YGEdgeBottom"));
-	public static var Start(default, never) = new Edge(untyped __cpp__("YGEdgeStart"));
-	public static var End(default, never) = new Edge(untyped __cpp__("YGEdgeEnd"));
-	public static var Horizontal(default, never) = new Edge(untyped __cpp__("YGEdgeHorizontal"));
-	public static var Vertical(default, never) = new Edge(untyped __cpp__("YGEdgeVertical"));
-	public static var All(default, never) = new Edge(untyped __cpp__("YGEdgeAll"));
+@:unreflective
+@:include('YGEnums.h')
+@:enum extern abstract Edge(YGEdge) {
+	@:native("YGEdgeLeft") var Left;
+	@:native("YGEdgeTop") var Top;
+	@:native("YGEdgeRight") var Right;
+	@:native("YGEdgeBottom") var Bottom;
+	@:native("YGEdgeStart") var Start;
+	@:native("YGEdgeEnd") var End;
+	@:native("YGEdgeHorizontal") var Horizontal;
+	@:native("YGEdgeVertical") var Vertical;
+	@:native("YGEdgeAll") var All;
 }
 
 
-@:keep
-@:unreflective
-@:include('linc_yoga.h')
 
+@:unreflective
+@:include('YGEnums.h')
 @:native("YGExperimentalFeature")
 extern class YGExperimentalFeature { }
 
-abstract ExperimentalFeature(Int) from Int to Int{
-	inline public function new(i:Int) { this = i; }
 
-	@:to(YGExperimentalFeature)
-	@:unreflective
-	inline public function toNative() return untyped __cpp__("((YGExperimentalFeature)({0}))", this);
-
-	@:from(YGExperimentalFeature)
-	@:unreflective
-	inline static public function fromNative(value:YGExperimentalFeature) return new ExperimentalFeature(untyped value);
-
-	public static var WebFlexBasis(default, never) = new ExperimentalFeature(untyped __cpp__("YGExperimentalFeatureWebFlexBasis"));
+@:unreflective
+@:include('YGEnums.h')
+@:enum extern abstract ExperimentalFeature(YGExperimentalFeature){
+	@:native("YGExperimentalFeatureWebFlexBasis") var WebFlexBasis;
 }
 
-@:keep
-@:unreflective
-@:include('linc_yoga.h')
 
+@:unreflective
+@:include('YGEnums.h')
 @:native("YGFlexDirection")
 extern class YGFlexDirection { }
-abstract FlexDirection(Int) from Int to Int {
-	inline public function new(i:Int) { this = i; }
 
-	@:to(YGFlexDirection)
-	@:unreflective
-	inline public function toNative() return untyped __cpp__("((YGFlexDirection)({0}))", this);
 
-	@:from(YGFlexDirection)
-	@:unreflective
-	inline static public function fromNative(value:YGFlexDirection) return new FlexDirection(untyped value);
-	
-	public static var Column(default, never) = new FlexDirection(untyped __cpp__("YGFlexDirectionColumn"));
-	public static var ColumnReverse(default, never) = new FlexDirection(untyped __cpp__("YGFlexDirectionColumnReverse"));
-	public static var Row(default, never) = new FlexDirection(untyped __cpp__("YGFlexDirectionRow"));
-	public static var RowReverse(default, never) = new FlexDirection(untyped __cpp__("YGFlexDirectionRowReverse"));
+@:unreflective
+@:include('YGEnums.h')
+@:enum extern abstract FlexDirection(YGFlexDirection) {
+	@:native("YGFlexDirectionColumn") var Column;
+	@:native("YGFlexDirectionColumnReverse") var ColumnReverse;
+	@:native("YGFlexDirectionRow") var Row;
+	@:native("YGFlexDirectionRowReverse") var RowReverse;
 }
 
-@:keep
-@:unreflective
-@:include('linc_yoga.h')
 
-@:native("::YGJustify")
+@:unreflective
+@:include('YGEnums.h')
+@:native("YGJustify")
 extern class YGJustify { }
-abstract Justify(Int) from Int to Int {
-	inline public function new(i:Int) { this = i; }
 
-	@:to(YGJustify)
-	@:unreflective
-	inline public function toNative() return untyped __cpp__("((YGJustify)({0}))", this);
 
-	@:from(YGJustify)
-	@:unreflective
-	inline static public function fromNative(value:YGFlexDirection) return new Justify(untyped value);
-
-	public static var FlexStart(default, never) = new Justify(untyped __cpp__("YGJustifyFlexStart"));
-	public static var FlexEnd(default, never) = new Justify(untyped __cpp__("YGJustifyFlexEnd"));
-	public static var Center(default, never) = new Justify(untyped __cpp__("YGJustifyCenter"));
-	public static var SpaceBetween(default, never) = new Justify(untyped __cpp__("YGJustifySpaceBetween"));
-	public static var SpaceAround(default, never) = new Justify(untyped __cpp__("YGJustifySpaceAround"));
+@:unreflective
+@:include('YGEnums.h')
+@:enum extern abstract Justify(YGJustify) {
+	@:native("YGJustifyFlexStart") var FlexStart;
+	@:native("YGJustifyFlexEnd") var FlexEnd;
+	@:native("YGJustifyCenter") var Center;
+	@:native("YGJustifySpaceBetween") var SpaceBetween;
+	@:native("YGJustifySpaceAround") var SpaceAround;
 }
 
-@:keep
-@:unreflective
-@:include('linc_yoga.h')
 
-@:native("::YGLogLevel")
+@:unreflective
+@:include('YGEnums.h')
+@:native("YGLogLevel")
 extern class YGLogLevel { }
-abstract LogLevel(Int) from Int to Int {
-	inline public function new(i:Int) { this = i; }
-
-	@:to(YGLogLevel)
-	@:unreflective
-	inline public function toNative() return untyped __cpp__("((YGLogLevel)({0}))", this);
-
-	@:from(YGLogLevel)
-	@:unreflective
-	inline static public function fromNative(value:YGLogLevel) return new LogLevel(untyped value);
-
-	public static var Error(default, never) = new LogLevel(untyped __cpp__("YGLogLevelError"));
-	public static var Warn(default, never) = new LogLevel(untyped __cpp__("YGLogLevelWarn"));
-	public static var Info(default, never) = new LogLevel(untyped __cpp__("YGLogLevelInfo"));
-	public static var Debug(default, never) = new LogLevel(untyped __cpp__("YGLogLevelDebug"));
-	public static var Verbose(default, never) = new LogLevel(untyped __cpp__("YGLogLevelVerbose"));
-	public static var Fatal(default, never) = new LogLevel(untyped __cpp__("YGLogLevelFatal"));
-}
 
 @:keep
 @:unreflective
-@:include('linc_yoga.h')
+@:include('YGEnums.h')
+@:enum extern abstract LogLevel(YGLogLevel) {
+	@:native("YGLogLevelError") var Error;
+	@:native("YGLogLevelWarn") var Warn;
+	@:native("YGLogLevelInfo") var Info;
+	@:native("YGLogLevelDebug") var Debug;
+	@:native("YGLogLevelVerbose") var Verbose;
+	@:native("YGLogLevelFatal") var Fatal;
+}
 
-@:native("::YGMeasureMode")
+
+@:unreflective
+@:include('YGEnums.h')
+@:native("YGMeasureMode")
 extern class YGMeasureMode { }
-abstract MeasureMode(Int) from Int to Int {
-	inline public function new(i:Int) { this = i; }
 
-	@:to(YGMeasureMode)
-	@:unreflective
-	inline public function toNative() return untyped __cpp__("((YGMeasureMode)({0}))", this);
 
-	@:from(YGMeasureMode)
-	@:unreflective
-	inline static public function fromNative(value:YGMeasureMode) return new MeasureMode(untyped value);
-
-	public static var Undefined(default, never) = new MeasureMode(untyped __cpp__("YGMeasureModeUndefined"));
-	public static var Exactly(default, never) = new MeasureMode(untyped __cpp__("YGMeasureModeExactly"));
-	public static var AtMost(default, never) = new MeasureMode(untyped __cpp__("YGMeasureModeAtMost"));
+@:unreflective
+@:include('YGEnums.h')
+@:enum extern abstract MeasureMode(YGMeasureMode) {
+	@:native("YGMeasureModeUndefined") var Undefined;
+	@:native("YGMeasureModeExactly") var Exactly;
+	@:native("YGMeasureModeAtMost") var AtMost;
 }
 
-@:keep
-@:unreflective
-@:include('linc_yoga.h')
 
-@:native("::YGNodeType")
+@:unreflective
+@:include('YGEnums.h')
+@:native("YGNodeType")
 extern class YGNodeType { }
-abstract NodeType(Int) from Int to Int {
-	inline public function new(i:Int) { this = i; }
 
-	@:to(YGNodeType)
-	@:unreflective
-	inline public function toNative() return untyped __cpp__("((YGNodeType)({0}))", this);
 
-	@:from(YGNodeType)
-	@:unreflective
-	inline static public function fromNative(value:YGNodeType) return new NodeType(untyped value);
-
-	public static var Default(default, never) = new NodeType(untyped __cpp__("YGNodeTypeDefault"));
-	public static var Text(default, never) = new NodeType(untyped __cpp__("YGNodeTypeText"));
+@:unreflective
+@:include('YGEnums.h')
+@:enum extern abstract NodeType(YGNodeType) {
+	@:native("YGNodeTypeDefault") var Default;
+	@:native("YGNodeTypeText") var Text;
 }
 
-@:keep
-@:unreflective
-@:include('linc_yoga.h')
 
-@:native("::YGOverflow")
+@:unreflective
+@:include('YGEnums.h')
+@:native("YGOverflow")
 extern class YGOverflow { }
-abstract Overflow(Int) from Int to Int {
 
-	inline public function new(i:Int) { this = i; }
 
-	@:to(YGOverflow)
-	@:unreflective
-	inline public function toNative() return untyped __cpp__("((YGOverflow)({0}))", this);
-
-	@:from(YGOverflow)
-	@:unreflective
-	inline static public function fromNative(value:YGOverflow) return new Overflow(untyped value);
-
-	public static var Visible (default, never) = new Overflow(untyped __cpp__("YGOverflowVisible"));
-	public static var Hidden (default, never) = new Overflow(untyped __cpp__("YGOverflowHidden"));
-	public static var Scroll (default, never) = new Overflow(untyped __cpp__("YGOverflowScroll"));
+@:unreflective
+@:include('YGEnums.h')
+@:enum extern abstract Overflow(YGOverflow) {
+	@:native("YGOverflowVisible") var Visible;
+	@:native("YGOverflowHidden") var Hidden;
+	@:native("YGOverflowScroll") var Scroll;
 }
 
-@:keep
-@:unreflective
-@:include('linc_yoga.h')
 
-@:native("::YGPositionType")
+@:unreflective
+@:include('YGEnums.h')
+@:native("YGPositionType")
 extern class YGPositionType { }
-abstract PositionType(Int) from Int to Int {
-	inline public function new(i:Int) { this = i; }
 
-	@:to(YGPositionType)
-	@:unreflective
-	inline public function toNative() return untyped __cpp__("((YGPositionType)({0}))", this);
 
-	@:from(YGPositionType)
-	@:unreflective
-	inline static public function fromNative(value:YGPositionType) return new PositionType(untyped value);
-
-	public static var Relative (default, never) = new PositionType(untyped __cpp__("YGPositionTypeRelative"));
-	public static var Absolute (default, never) = new PositionType(untyped __cpp__("YGPositionTypeAbsolute"));
+@:unreflective
+@:include('YGEnums.h')
+@:enum extern abstract PositionType(YGPositionType) {
+	@:native("YGPositionTypeRelative") var Relative;
+	@:native("YGPositionTypeAbsolute") var Absolute;
 }
 
-@:keep
-@:unreflective
-@:include('linc_yoga.h')
 
-@:native("::YGPrintOptions")
+@:unreflective
+@:include('YGEnums.h')
+@:native("YGPrintOptions")
 extern class YGPrintOptions { }
-abstract PrintOptions(Int) from Int to Int {
-	inline public function new(i:Int) { this = i; }
 
-	@:to(YGPrintOptions)
-	@:unreflective
-	inline public function toNative() return untyped __cpp__("((YGPrintOptions)({0}))", this);
 
-	@:from(YGPrintOptions)
-	@:unreflective
-	inline static public function fromNative(value:YGPrintOptions) return new PrintOptions(untyped value);
-
-	public static var Layout (default, never) = new PrintOptions(untyped __cpp__("YGPrintOptionsLayout"));
-	public static var Style (default, never) = new PrintOptions(untyped __cpp__("YGPrintOptionsStyle"));
-	public static var Children (default, never) = new PrintOptions(untyped __cpp__("YGPrintOptionsChildren"));
+@:unreflective
+@:include('YGEnums.h')
+@:enum extern abstract PrintOptions(YGPrintOptions) {
+	@:native("YGPrintOptionsLayout") var Layout;
+	@:native("YGPrintOptionsStyle") var Style;
+	@:native("YGPrintOptionsChildren") var Children;
 }
 
-@:keep
-@:unreflective
-@:include('linc_yoga.h')
 
-@:native("::YGUnit")
+@:unreflective
+@:include('YGEnums.h')
+@:native("YGUnit")
 extern class YGUnit { }
-abstract Unit(Int) from Int to Int {
-	inline public function new(i:Int) { this = i; }
 
-	@:to(YGUnit)
-	@:unreflective
-	inline public function toNative() return untyped __cpp__("((YGUnit)({0}))", this);
 
-	@:from(YGUnit)
-	@:unreflective
-	inline static public function fromNative(value:YGUnit) return new Unit(untyped value);
-
-	public static var Undefined (default, never) = new Unit(untyped __cpp__("YGUnitUndefined"));
-	public static var Point (default, never) = new Unit(untyped __cpp__("YGUnitPoint"));
-	public static var Percent (default, never) = new Unit(untyped __cpp__("YGUnitPercent"));
-	public static var Auto (default, never) = new Unit(untyped __cpp__("YGUnitAuto"));
+@:unreflective
+@:include('YGEnums.h')
+@:enum extern abstract Unit(YGUnit) {
+	@:native("YGUnitUndefined") var Undefined;
+	@:native("YGUnitPoint") var Point;
+	@:native("YGUnitPercent") var Percent;
+	@:native("YGUnitAuto") var Auto;
 }
 
-@:keep
+
 @:unreflective
-@:include('linc_yoga.h')
+@:include('YGEnums.h')
+@:native("YGWrap")
+extern class YGWrap {}
 
-@:native("::YGWrap")
-extern class YGWrap { }
-abstract Wrap(Int) from Int to Int {
-	inline public function new(i:Int) { this = i; }
 
-	@:to(YGWrap)
-	@:unreflective
-	inline public function toNative() return untyped __cpp__("((YGWrap)({0}))", this);
-
-	@:from(YGWrap)
-	@:unreflective
-	inline static public function fromNative(value:YGWrap) return new Wrap(untyped value);
-
-	public static var NoWrap (default, never) = new Wrap(untyped __cpp__("YGWrapNoWrap"));
-	public static var Wrap (default, never) = new Wrap(untyped __cpp__("YGWrapWrap"));
-	public static var WrapReverse (default, never) = new Wrap(untyped __cpp__("YGWrapWrapReverse"));
+@:unreflective
+@:include('YGEnums.h')
+@:enum extern abstract FlxWrap(YGWrap) {
+	@:native("YGWrapNoWrap") var NoWrap;
+	@:native("YGWrapWrap") var Wrap;
+	@:native("YGWrapWrapReverse") var WrapReverse;
 }
 
 
@@ -568,11 +449,11 @@ class Enums {
 	}
 
 	// WrapToString returns string version of Wrap enum
-	public static inline function wrapToString(value:Wrap):String {
+	public static function wrapToString(value:FlxWrap):String {
 		return switch value {
-			case Wrap.NoWrap: "no-wrap";
-			case Wrap.Wrap: "wrap";
-			case Wrap.WrapReverse: "wrap-reverse";
+			case FlxWrap.NoWrap: "no-wrap";
+			case FlxWrap.Wrap: "wrap";
+			case FlxWrap.WrapReverse: "wrap-reverse";
 			default: "unknown";
 		}		
 	}	

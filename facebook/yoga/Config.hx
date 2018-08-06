@@ -3,26 +3,28 @@ package facebook.yoga;
 
 using facebook.yoga.Enums;
 
-@:keep
+
 @:include('linc_yoga.h')
-
-// @:native('::cpp::Reference<YGConfigRef>')
-// extern class ConfigRef {}
-
-// @:native('::cpp::Struct<YGConfig>')
-
-@:native('::cpp::Reference<YGConfigRef>')
+@:native('::YGConfigRef')
 extern class Config {
-	private var experimentalFeatures:Array<Bool>;
 
+	@:native('useWebDefaults')
 	public var useWebDefaults:Bool;
+
+	@:native('useLegacyStretchBehaviour')
 	public var useLegacyStretchBehaviour:Bool;
+
+	@:native('pointScaleFactor')
 	public var pointScaleFactor:Float;
-	public var logger:Int;
+
+	@:native('logger')
+	public var logger:Logger;
+
+	@:native('context')
 	public var context:Dynamic;
 
 
-	@:native('::linc::yoga::config::NewConfig')
-	static function init(logger:Int):Config;
+	@:native('::linc::yoga::NewConfig')
+	static function init():Config;
 
 }

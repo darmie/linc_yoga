@@ -7,49 +7,38 @@ namespace linc {
 	
 	namespace yoga {
 
-		namespace node {
+			//typedef YGLogger Logger;
+
+			YGCachedMeasurement NewCachedMeasurement() {
+				return YGCachedMeasurement();
+			}
+
 			YGNodeRef NewYogaNode() {
 				return new YGNode();
 			}
 
 			YGNodeRef NewYogaNodeWithConfig(const YGConfigRef newConfig) {
 				return new YGNode(newConfig);
-			}			
-		} // node
-
-
-		namespace config {
-			YGConfigRef NewConfig(int logger) {
-				return new YGConfig((YGLogger)logger);
 			}
-		} // config
 
-		namespace style {
+			YGConfigRef NewConfig() {
+				return YGConfigNew();
+			}
+
 			YGStyle NewStyle() {
 				return YGStyle();
 			}
-		} // style
 
-		namespace layout {
 			YGLayout NewLayout() {
 				return YGLayout();
-			} //layout
-		}
+			}
 
-		namespace floatOptional {
 			YGFloatOptional NewFloatOptional() {
 				return YGFloatOptional();
 			}
 			YGFloatOptional NewFloatOptionalWithValue(float value){
 				return YGFloatOptional(value);
-			}
-		} // floatOptional	
-
-		namespace cachedMeasurement {
-			YGCachedMeasurement NewCachedMeasurement() {
-				return YGCachedMeasurement();
-			}
-		} // CachedMeasurement			
+			}		
 
 	} //yoga
 

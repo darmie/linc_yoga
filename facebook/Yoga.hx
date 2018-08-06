@@ -5,7 +5,7 @@ import facebook.yoga.*;
 
 using facebook.yoga.Enums;
 
-@:keep
+
 @:include('linc_yoga.h')
 #if !display
 @:build(linc.Linc.touch())

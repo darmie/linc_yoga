@@ -2,10 +2,9 @@ package facebook.yoga;
 
 using facebook.yoga.Enums;
 
-@:keep
+
 @:include('linc_yoga.h')
-@:unreflective
-@:structAccess
+
 @:native('::YGCachedMeasurement')
 // CachedMeasurement describes measurements
 extern class CachedMeasurement  {

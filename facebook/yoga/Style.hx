@@ -1,12 +1,12 @@
 package facebook.yoga;
 
 using facebook.yoga.Enums;
-@:unreflective
 
-@:keep
+
+
 @:include('linc_yoga.h')
 //Style
-//@:structAccess
+@:structAccess
 @:native('::YGStyle')
 extern class Style {
 
@@ -32,7 +32,7 @@ extern class Style {
 	public var positionType:PositionType;
 
 	@:native('flexWrap')
-	public var flexWrap:Wrap;
+	public var flexWrap:FlxWrap;
 
 	@:native('overflow')
 	public var overflow:Overflow;
@@ -77,6 +77,6 @@ extern class Style {
 	@:native('aspectRatio')
 	public var aspectRatio:Float;
 
-	@:native('::linc::yoga::style::NewStyle')
+	@:native('::linc::yoga::NewStyle')
 	static function init():Style;
 }

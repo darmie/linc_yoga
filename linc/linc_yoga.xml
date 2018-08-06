@@ -1,18 +1,37 @@
 <xml>
-	<set name="NATIVE_TOOLKIT_PATH" value="${LINC_YOGA_PATH}/lib/" />
+	<set name="NATIVE_TOOLKIT_PATH" value="${LINC_YOGA_PATH}lib/" />
 
 	<set name="ANDROID" value="1" if="android"/>
 
-	<files id='haxe'>
-	    <compilerflag value='-I${LINC_YOGA_PATH}/linc/'/>
-        <compilerflag value='-I${LINC_YOGA_PATH}/lib/yoga/'/>
-		<file name='${LINC_YOGA_PATH}/linc/linc_yoga.cpp' />
-		<compilerflag value='-Wall' />
+	<files id='linc_yoga'>
+		<compilerflag value='-I${LINC_YOGA_PATH}lib/yoga/'/>
+	    <compilerflag value='-I${LINC_YOGA_PATH}linc/'/>
+		<file name='${LINC_YOGA_PATH}linc/linc_yoga.cpp' />	
+		<file name='${LINC_YOGA_PATH}lib/yoga/Yoga.cpp' />	
+		<file name='${LINC_YOGA_PATH}lib/yoga/YGNode.cpp' />
+		<file name='${LINC_YOGA_PATH}lib/yoga/YGConfig.cpp' />
+		<file name='${LINC_YOGA_PATH}lib/yoga/YGEnums.cpp' />
+		<file name='${LINC_YOGA_PATH}lib/yoga/YGFloatOptional.cpp' />
+		<file name='${LINC_YOGA_PATH}lib/yoga/YGLayout.cpp' />
+		<file name='${LINC_YOGA_PATH}lib/yoga/YGStyle.cpp' />
+		<file name='${LINC_YOGA_PATH}lib/yoga/YGNodePrint.cpp' />
+		<file name='${LINC_YOGA_PATH}lib/yoga/YGMacros.cpp' />
+		<file name='${LINC_YOGA_PATH}lib/yoga/Utils.cpp' />
 	</files>
 
-	<files id="__main__">
-		<compilerflag value='-I${LINC_YOGA_PATH}/linc/'/>
-        <compilerflag value='-I${LINC_YOGA_PATH}/lib/yoga/'/>
-		<compilerflag value='-Wall' />
+	<files id='haxe'>
+
+		<compilerflag value='-I${LINC_YOGA_PATH}lib/yoga/'/>
+	    <compilerflag value='-I${LINC_YOGA_PATH}linc/'/>
+		<file name='${LINC_YOGA_PATH}linc/linc_yoga.cpp' />
+		<file name='${LINC_YOGA_PATH}lib/yoga/Yoga.cpp' />	
+		<file name='${LINC_YOGA_PATH}lib/yoga/YGNode.cpp' />
+		<file name='${LINC_YOGA_PATH}lib/yoga/YGConfig.cpp' />
+		<file name='${LINC_YOGA_PATH}lib/yoga/YGEnums.cpp' />
+		<file name='${LINC_YOGA_PATH}lib/yoga/YGFloatOptional.cpp' />
+		<file name='${LINC_YOGA_PATH}lib/yoga/YGLayout.cpp' />
+		<file name='${LINC_YOGA_PATH}lib/yoga/YGStyle.cpp' />
+		<file name='${LINC_YOGA_PATH}lib/yoga/YGNodePrint.cpp' />
+		<file name='${LINC_YOGA_PATH}lib/yoga/Utils.cpp' />
 	</files>
 </xml>

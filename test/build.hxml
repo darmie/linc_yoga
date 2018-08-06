@@ -1,6 +1,9 @@
 -main Test.hx
 -cpp cpp/
 -cp ../
+-dce full
+
+
 # pick a target
 #-D mac
 #-D windows

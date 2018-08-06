@@ -2,18 +2,24 @@ package;
 
 import facebook.Yoga;
 import facebook.yoga.*;
-using facebook.yoga.Enums;
+
 
 class Test {
         
-    static function main() {
-		// var logger:Logger = function(config:Config.ConfigRef, node:Node.NodeRef, logLevel:LogLevel, format:Dynamic, list:Dynamic) {
-		// 	return 0;
-		// };
-		var config:Config = Config.init(0);
+    public static function main() {
 
-		var style:Style = Style.init();
+		var config:Config = Yoga.newConfig();
+
+		var node:Node = Yoga.newNodeWithConfig(config);
 		
-    }
+		node.setLayout(Layout.init());
+
+		Yoga.nodeCalculateLayout(node, 200.0, 200.0, facebook.yoga.Enums.Direction.LTR);
+
+		var width:Float = untyped __cpp__('node->getLayout().dimensions[0]');
+		var height:Float = untyped __cpp__('node->getLayout().dimensions[1]');
+
+		trace('${width}, ${height}');
+    }	
 
 }
