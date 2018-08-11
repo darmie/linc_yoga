@@ -274,12 +274,12 @@ class Enums {
 
 	public static var measureModeCount = 3;
 
-	public static var valueUndefined:Value = {value: Math.NaN, unit:Unit.Undefined};
+	public static var valueUndefined:Value = Value.set(Math.NaN, Unit.Undefined);
 
-	public static var valueAuto:Value = {value: Math.NaN, unit:Unit.Auto};
+	public static var valueAuto:Value = Value.set(Math.NaN, Unit.Auto);
 
 	// ValueZero defines a zero value
-	public static var valueZero:Value = {value: 0, unit: Unit.Point};
+	public static var valueZero:Value = Value.set(0, Unit.Point);
 
 
 

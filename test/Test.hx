@@ -16,8 +16,8 @@ class Test {
 
 		Yoga.nodeCalculateLayout(node, 200.0, 200.0, facebook.yoga.Enums.Direction.LTR);
 
-		var width:Float = untyped __cpp__('node->getLayout().dimensions[0]');
-		var height:Float = untyped __cpp__('node->getLayout().dimensions[1]');
+		var width:Float = node.getLayout().dimensions[0];
+		var height:Float = node.getLayout().dimensions[1];
 
 		trace('${width}, ${height}');
     }	

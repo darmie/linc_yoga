@@ -3,11 +3,16 @@
 #include "./linc_yoga.h"
 
 
+
 namespace linc {
 	
 	namespace yoga {
 
 			//typedef YGLogger Logger;
+
+			YGValue setValue(float value, YGUnit unit) {
+				return {value, unit};
+			}
 
 			YGCachedMeasurement NewCachedMeasurement() {
 				return YGCachedMeasurement();

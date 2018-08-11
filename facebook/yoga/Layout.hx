@@ -12,19 +12,19 @@ using facebook.yoga.Enums;
 @:native('::YGLayout')
 extern class Layout {
 	@:native('position')
-	public var position:Array<Float>;
+	public var position:StdArray<Float>;
 
 	@:native('dimensions')
-	public var dimensions:Array<Float>;
+	public var dimensions:StdArray<Float>;
 
 	@:native('margin')
-	public var margin:Array<Float>;
+	public var margin:StdArray<Float>;
 
 	@:native('border')
-	public var border:Array<Float>;
+	public var border:StdArray<Float>;
 
 	@:native('padding')
-	public var padding:Array<Float>;
+	public var padding:StdArray<Float>;
 
 	@:native('direction')
 	public var direction:Direction;

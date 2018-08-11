@@ -53,25 +53,25 @@ extern class Style {
 	public var flexBasis:Value;
 
 	@:native('margin')
-	public var margin:Array<Value>;
+	public var margin:StdArray<Value>;
 
 	@:native('position')
-	public var position:Array<Value>;
+	public var position:StdArray<Value>;
 
 	@:native('padding')
-	public var padding:Array<Value>;
+	public var padding:StdArray<Value>;
 
 	@:native('border')
-	public var border:Array<Value>;
+	public var border:StdArray<Value>;
 
 	@:native('dimensions')
-	public var dimensions:Array<Value>;
+	public var dimensions:StdArray<Value>;
 
 	@:native('minDimensions')
-	public var minDimensions:Array<Value>;
+	public var minDimensions:StdArray<Value>;
 
 	@:native('maxDimensions')
-	public var maxDimensions:Array<Value>;
+	public var maxDimensions:StdArray<Value>;
 
 	// Yoga specific properties, not compatible with flexbox specification
 	@:native('aspectRatio')

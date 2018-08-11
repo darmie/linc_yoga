@@ -7,11 +7,12 @@
 //#include "../lib/yoga/YGEnums.h"
 #include "../lib/yoga/YGNode.h"
 #include "../lib/yoga/Yoga.h"
-
+#include <YGEnums.h>
 
 namespace linc {
 
 	namespace yoga {
+			YGValue setValue(float value, YGUnit unit);
 			YGNodeRef NewYogaNode();
 			YGNodeRef NewYogaNodeWithConfig(YGConfigRef newConfig);
 			YGConfigRef NewConfig();	
