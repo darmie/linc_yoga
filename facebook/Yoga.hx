@@ -1,6 +1,6 @@
 package facebook;
 
-
+import cpp.Float32;
 import facebook.yoga.*;
 
 using facebook.yoga.Enums;
@@ -14,7 +14,7 @@ using facebook.yoga.Enums;
 
 //Yoga
 extern class Yoga {
-
+	public inline static final Undefined:Float32 = 1e+21;
 
 	#if android 
 	@:native('::YGAndroidLog')
