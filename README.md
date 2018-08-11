@@ -5,9 +5,35 @@ This is a Haxe/LINC extern library for the [facebook yoga](https://github.com/fa
 
 For more information, see the [Yoga website](https://yogalayout.com/)
 
+____
+
+This library works with the Haxe cpp target only.
+___
 
 
+# Install
 
+`$ haxelib dev linc_yoga https://github.com/darmie/linc_yoga.git`
+
+
+# Usage
+
+```hx
+import facebook.Yoga
+
+var config:Config = Yoga.newConfig();
+
+var node:Node = Yoga.newNodeWithConfig(config);
+		
+node.setLayout(Layout.init());
+
+Yoga.nodeCalculateLayout(node, 200.0, 200.0, facebook.yoga.Enums.Direction.LTR);
+
+var width:Float = node.getLayout().dimensions[0];
+var height:Float = node.getLayout().dimensions[1];
+
+trace('${width}, ${height}');
+```
 _____
 
 
