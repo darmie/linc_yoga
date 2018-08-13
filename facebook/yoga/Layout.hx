@@ -15,7 +15,7 @@ extern class Layout {
 	public var position:StdArray<Float>;
 
 	@:native('dimensions')
-	public var dimensions:StdArray<Float>;
+	public var dimensions:cpp.RawPointer<Float>;
 
 	@:native('margin')
 	public var margin:StdArray<Float>;

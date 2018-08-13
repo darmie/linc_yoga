@@ -3,7 +3,7 @@
 -cp ../
 -dce full
 
-
+-lib utest
 # pick a target
 #-D mac
 #-D windows
