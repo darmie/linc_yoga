@@ -1,7 +1,8 @@
+-cp test/
 -main Test.hx
--cpp cpp/
--cp ../
-#-dce full
+-cpp test/cpp/
+-cp ./
+# -dce no
 
 -lib utest
 # pick a target
@@ -16,5 +17,5 @@
 -D HXCPP_M32
 
 
--cmd ./cpp/Test
+-cmd ./test/cpp/Test
 #-cmd ./cpp/Test.exe
