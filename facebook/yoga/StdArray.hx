@@ -1,28 +1,27 @@
 package facebook.yoga;
 
+import cpp.RawPointer;
+
 @:unreflective
 @:structAccess
 @:native("std::array")
 extern class StdArrayImpl<T> {
-    public var data(get, never):cpp.RawPointer<T>;
+	@:noCompletion
+	public var data(get, never):RawPointer<T>;
 	public var length(get, never):Int;
-	
+
 	@:native('size')
 	public function get_length():Int;
 
-	@:native('at')
-	public function at(index:Int):T;
+	@:native('data')
+	public function get_data():RawPointer<T>;
 }
 
 @:forward
 abstract StdArray<T>(StdArrayImpl<T>) {
 	@:arrayAccess
-	public inline function get(index:Int):T {
-		return this.at(index);
-	}
+	public inline function get(index:Int):T return this.data[index];
 
 	@:arrayAccess
-	public inline function set(index:Int, value:T):T {				
-		return this.data[index] = value;
-	}    
+	public inline function set(index:Int, value:T):T return this.data[index] = value;
 }
