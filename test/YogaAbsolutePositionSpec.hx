@@ -9,11 +9,9 @@ import facebook.yoga.Enums.PositionType;
 import facebook.Yoga;
 import facebook.yoga.*;
 
-import facebook.yoga.Layout;
-
 import utest.Assert;
 /**
-	bsolutePositionTest
+	AbsolutePositionTest
 **/
 class YogaAbsolutePositionSpec {
 

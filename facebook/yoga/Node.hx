@@ -4,7 +4,7 @@ using facebook.yoga.Enums;
 using facebook.yoga.Config;
 
 import facebook.yoga.Vector;
-import facebook.yoga.BaseLineFunc;
+//import facebook.yoga.BaseLineFunc;
 
 
 @:include('linc_yoga.h')
@@ -34,7 +34,7 @@ extern class Node {
 	public function getMeasure():MeasureFunc;
 
 	@:native('getBaseline')
-	public function getBaseline():BaseLineFunc;	
+	public function getBaseline():Dynamic;	
 
 	@:native('getDirtied')
 	public function getDirtied():DirtiedFunc;

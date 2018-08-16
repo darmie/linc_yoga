@@ -9,6 +9,8 @@ class Test {
 
 		//Absolute positions
 		test.addCase(new YogaAbsolutePositionSpec());
+
+		test.addCase(new YogaAlignBaselineSpec());
 		
 		Report.create(test);
 		test.run();		

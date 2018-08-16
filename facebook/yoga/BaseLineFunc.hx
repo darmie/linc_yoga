@@ -1,3 +1,9 @@
 package facebook.yoga;
 
-typedef BaseLineFunc = cpp.Callable<(Node -> Float -> Float ) -> Float>;
+
+import cpp.Float32;
+
+
+typedef BaseLineFunc = cpp.Callable<Node->Float32->Float32->Float32>;
+
+
