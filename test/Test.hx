@@ -7,10 +7,14 @@ class Test {
 	public static function main(){
 		var test = new Runner();
 
-		//Absolute positions
+		// Absolute positions
 		test.addCase(new YogaAbsolutePositionSpec());
 
+		// Align Baseline
 		test.addCase(new YogaAlignBaselineSpec());
+
+		// Align Content
+		test.addCase(new YogaAlignContentSpec());
 		
 		Report.create(test);
 		test.run();		
