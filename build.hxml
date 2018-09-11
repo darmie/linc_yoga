@@ -5,17 +5,8 @@
 # -dce no
 
 -lib utest
-# pick a target
-#-D mac
-#-D windows
-#-D linux
 
-# To build 32 or 64 bit
-#(if not using the default for your platform):
-
-#-D HXCPP_M64
--D HXCPP_M32
+-D HXCPP_M64
 
 
 -cmd ./test/cpp/Test
-#-cmd ./cpp/Test.exe
