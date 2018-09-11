@@ -121,6 +121,7 @@ extern class YGJustify {}
 	@:native("YGJustifyCenter") var Center;
 	@:native("YGJustifySpaceBetween") var SpaceBetween;
 	@:native("YGJustifySpaceAround") var SpaceAround;
+	@:native("YGJustifySpaceEvenly") var SpaceEvenly;
 }
 
 @:unreflective

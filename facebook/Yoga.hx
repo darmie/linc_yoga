@@ -186,7 +186,7 @@ extern class Yoga {
 	@:native('::YGNodeStyleSetWidthPercent')
 	public static function nodeStyleSetWidthPercent(node:Node, width:Float):Void;
 	@:native('::YGNodeStyleSetWidthAuto')
-	public static function nodeStyleSetWidthAuto(node:Node):Void;
+	public static function nodeStyleSetWidthAuto(node:Node, width:Float):Void;
 	@:native('::YGNodeStyleGetWidth')
 	public static function nodeStyleGetWidth(node:Node):Value;
 	@:native('::YGNodeStyleSetHeight')
@@ -194,7 +194,7 @@ extern class Yoga {
 	@:native('::YGNodeStyleSetHeightPercent')
 	public static function nodeStyleSetHeightPercent(node:Node, height:Float):Void;
 	@:native('::YGNodeStyleSetHeightAuto')
-	public static function nodeStyleSetHeightAuto(node:Node):Void;
+	public static function nodeStyleSetHeightAuto(node:Node, height:Float):Void;
 	@:native('::YGNodeStyleGetHeight')
 	public static function nodeStyleGetHeight(node:Node):Value;
 	@:native('::YGNodeStyleSetMinWidth')

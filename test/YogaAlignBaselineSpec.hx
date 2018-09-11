@@ -1,7 +1,5 @@
 import cpp.Callable;
-import facebook.yoga.Enums.Align;
-import facebook.yoga.Enums.Direction;
-import facebook.yoga.Enums.FlexDirection;
+using facebook.yoga.Enums;
 import facebook.Yoga;
 import facebook.yoga.*;
 import cpp.Float32;

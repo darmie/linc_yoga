@@ -6,4 +6,7 @@ import cpp.Float32;
 extern class Constants {
 	@:native('YGUndefined')
 	public static var Undefined:Float32;
+
+    @:native('YGAuto')
+	public static var Auto:Float32;
 }
