@@ -15,6 +15,9 @@ class Test {
 
 		// Align Content
 		test.addCase(new YogaAlignContentSpec());
+
+		// Align Items
+		test.addCase(new YogaAlignItemsSpec());
 		
 		Report.create(test);
 		test.run();		
