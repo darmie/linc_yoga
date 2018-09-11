@@ -1,14 +1,13 @@
 package facebook.yoga;
 
-
 @:unreflective
 @:include('YGEnums.h')
 @:native("YGAlign")
-extern class YGAlign { }
+extern class YGAlign {}
+
 /**
  * Align describes align flex attribute
  */
-
 @:unreflective
 @:include('YGEnums.h')
 @:enum extern abstract Align(YGAlign) {
@@ -22,13 +21,10 @@ extern class YGAlign { }
 	@:native("YGAlignSpaceAround") var SpaceAround;
 }
 
-
-
 @:unreflective
 @:include('YGEnums.h')
 @:native("YGDimension")
-extern class YGDimension { }
-
+extern class YGDimension {}
 
 @:unreflective
 @:include('YGEnums.h')
@@ -37,16 +33,14 @@ extern class YGDimension { }
 	@:native("YGDimensionHeight") var Height;
 }
 
-
-
 @:unreflective
 @:include('YGEnums.h')
 @:native("YGDirection")
-extern class YGDirection { }
+extern class YGDirection {}
+
 /**
  * Direction represents right-to-left or left-to-right direction
  */
-
 @:unreflective
 @:include('YGEnums.h')
 @:enum extern abstract Direction(YGDirection) {
@@ -55,30 +49,25 @@ extern class YGDirection { }
 	@:native("YGDirectionRTL") var RTL;
 }
 
-
-
 @:unreflective
 @:include('YGEnums.h')
 @:native("YGDisplay")
-extern class YGDisplay { }
+extern class YGDisplay {}
+
 /**
  * `display` property
  */
-
 @:unreflective
 @:include('YGEnums.h')
-@:enum extern abstract  Display(YGDisplay) {
+@:enum extern abstract Display(YGDisplay) {
 	@:native("YGDisplayFlex") var Flex;
 	@:native("YGDisplayNone") var None;
 }
 
-
-
 @:unreflective
 @:include('YGEnums.h')
 @:native("YGEdge")
-extern class YGEdge { }
-
+extern class YGEdge {}
 
 @:unreflective
 @:include('YGEnums.h')
@@ -94,26 +83,21 @@ extern class YGEdge { }
 	@:native("YGEdgeAll") var All;
 }
 
-
-
 @:unreflective
 @:include('YGEnums.h')
 @:native("YGExperimentalFeature")
-extern class YGExperimentalFeature { }
-
+extern class YGExperimentalFeature {}
 
 @:unreflective
 @:include('YGEnums.h')
-@:enum extern abstract ExperimentalFeature(YGExperimentalFeature){
+@:enum extern abstract ExperimentalFeature(YGExperimentalFeature) {
 	@:native("YGExperimentalFeatureWebFlexBasis") var WebFlexBasis;
 }
-
 
 @:unreflective
 @:include('YGEnums.h')
 @:native("YGFlexDirection")
-extern class YGFlexDirection { }
-
+extern class YGFlexDirection {}
 
 @:unreflective
 @:include('YGEnums.h')
@@ -124,12 +108,10 @@ extern class YGFlexDirection { }
 	@:native("YGFlexDirectionRowReverse") var RowReverse;
 }
 
-
 @:unreflective
 @:include('YGEnums.h')
 @:native("YGJustify")
-extern class YGJustify { }
-
+extern class YGJustify {}
 
 @:unreflective
 @:include('YGEnums.h')
@@ -141,11 +123,10 @@ extern class YGJustify { }
 	@:native("YGJustifySpaceAround") var SpaceAround;
 }
 
-
 @:unreflective
 @:include('YGEnums.h')
 @:native("YGLogLevel")
-extern class YGLogLevel { }
+extern class YGLogLevel {}
 
 @:keep
 @:unreflective
@@ -159,12 +140,10 @@ extern class YGLogLevel { }
 	@:native("YGLogLevelFatal") var Fatal;
 }
 
-
 @:unreflective
 @:include('YGEnums.h')
 @:native("YGMeasureMode")
-extern class YGMeasureMode { }
-
+extern class YGMeasureMode {}
 
 @:unreflective
 @:include('YGEnums.h')
@@ -174,12 +153,10 @@ extern class YGMeasureMode { }
 	@:native("YGMeasureModeAtMost") var AtMost;
 }
 
-
 @:unreflective
 @:include('YGEnums.h')
 @:native("YGNodeType")
-extern class YGNodeType { }
-
+extern class YGNodeType {}
 
 @:unreflective
 @:include('YGEnums.h')
@@ -188,12 +165,10 @@ extern class YGNodeType { }
 	@:native("YGNodeTypeText") var Text;
 }
 
-
 @:unreflective
 @:include('YGEnums.h')
 @:native("YGOverflow")
-extern class YGOverflow { }
-
+extern class YGOverflow {}
 
 @:unreflective
 @:include('YGEnums.h')
@@ -203,12 +178,10 @@ extern class YGOverflow { }
 	@:native("YGOverflowScroll") var Scroll;
 }
 
-
 @:unreflective
 @:include('YGEnums.h')
 @:native("YGPositionType")
-extern class YGPositionType { }
-
+extern class YGPositionType {}
 
 @:unreflective
 @:include('YGEnums.h')
@@ -217,12 +190,10 @@ extern class YGPositionType { }
 	@:native("YGPositionTypeAbsolute") var Absolute;
 }
 
-
 @:unreflective
 @:include('YGEnums.h')
 @:native("YGPrintOptions")
-extern class YGPrintOptions { }
-
+extern class YGPrintOptions {}
 
 @:unreflective
 @:include('YGEnums.h')
@@ -232,12 +203,10 @@ extern class YGPrintOptions { }
 	@:native("YGPrintOptionsChildren") var Children;
 }
 
-
 @:unreflective
 @:include('YGEnums.h')
 @:native("YGUnit")
-extern class YGUnit { }
-
+extern class YGUnit {}
 
 @:unreflective
 @:include('YGEnums.h')
@@ -248,12 +217,10 @@ extern class YGUnit { }
 	@:native("YGUnitAuto") var Auto;
 }
 
-
 @:unreflective
 @:include('YGEnums.h')
 @:native("YGWrap")
 extern class YGWrap {}
-
 
 @:unreflective
 @:include('YGEnums.h')
@@ -263,28 +230,18 @@ extern class YGWrap {}
 	@:native("YGWrapWrapReverse") var WrapReverse;
 }
 
-
-
-
 class Enums {
 	// EdgeCount is count of edges
 	public static var edgeCount = 9;
-
 	public static var experimentalFeatureCount = 1;
-
 	public static var measureModeCount = 3;
-
 	public static var valueUndefined:Value = Value.set(Math.NaN, Unit.Undefined);
-
 	public static var valueAuto:Value = Value.set(Math.NaN, Unit.Auto);
-
 	// ValueZero defines a zero value
 	public static var valueZero:Value = Value.set(0, Unit.Point);
 
-
-
 	// AlignToString returns string version of Align enum
-	public static inline function  alignToString(value:Align):String {
+	public static inline function alignToString(value:Align):String {
 		return switch value {
 			case Align.Auto: "auto";
 			case Align.FlexStart: "flex-start";
@@ -296,7 +253,7 @@ class Enums {
 			case Align.SpaceAround: "space-around";
 			default: "unknown";
 		}
-	}	
+	}
 
 	// DimensionToString returns string version of Dimension enum
 	public static inline function dimensionToString(value:Dimension):String {
@@ -314,7 +271,7 @@ class Enums {
 			case Direction.LTR: "ltr";
 			case Direction.RTL: "rtl";
 			default: "unknown";
-		}	
+		}
 	}
 
 	// DisplayToString returns string version of Display enum
@@ -323,8 +280,8 @@ class Enums {
 			case Display.Flex: "flex";
 			case Display.None: "none";
 			default: "unknown";
-		}	
-	}	
+		}
+	}
 
 	// EdgeToString returns string version of Edge enum
 	public static inline function edgeToString(value:Edge):String {
@@ -339,9 +296,8 @@ class Enums {
 			case Edge.Vertical: "vertical";
 			case Edge.All: "all";
 			default: "unknown";
-		}	
+		}
 	}
-
 
 	// ExperimentalFeatureToString returns string version of ExperimentalFeature enum
 	public static inline function experimentalFeatureToString(value:ExperimentalFeature):String {
@@ -349,8 +305,7 @@ class Enums {
 			case ExperimentalFeature.WebFlexBasis: "web-flex-basis";
 			default: "unknown";
 		}
-		
-	}	
+	}
 
 	// FlexDirectionToString returns string version of FlexDirection enum
 	public static inline function flexDirectionToString(value:FlexDirection):String {
@@ -360,7 +315,7 @@ class Enums {
 			case FlexDirection.Row: "row";
 			case FlexDirection.RowReverse: "row-reverse";
 			default: "unknown";
-		}	
+		}
 	}
 
 	// JustifyToString returns string version of Justify enum
@@ -372,7 +327,7 @@ class Enums {
 			case Justify.SpaceBetween: "space-between";
 			case Justify.SpaceAround: "space-around";
 			default: "unknown";
-		}		
+		}
 	}
 
 	// LogLevelToString returns string version of LogLevel enum
@@ -385,7 +340,7 @@ class Enums {
 			case LogLevel.Verbose: "verbose";
 			case LogLevel.Fatal: "fatal";
 			default: "unknown";
-		}	
+		}
 	}
 
 	// MeasureModeToString returns string version of MeasureMode enum
@@ -395,9 +350,8 @@ class Enums {
 			case MeasureMode.Exactly: "exactly";
 			case MeasureMode.AtMost: "at-most";
 			default: "unknown";
-		}	
+		}
 	}
-
 
 	// NodeTypeToString returns string version of NodeType enum
 	public static inline function nodeTypeToString(value:NodeType):String {
@@ -434,7 +388,7 @@ class Enums {
 			case PrintOptions.Style: "style";
 			case PrintOptions.Children: "children";
 			default: "unknown";
-		}		
+		}
 	}
 
 	// UnitToString returns string version of Unit enum
@@ -445,7 +399,7 @@ class Enums {
 			case Unit.Percent: "percent";
 			case Unit.Auto: "auto";
 			default: "unknown";
-		}	
+		}
 	}
 
 	// WrapToString returns string version of Wrap enum
@@ -455,6 +409,6 @@ class Enums {
 			case FlxWrap.Wrap: "wrap";
 			case FlxWrap.WrapReverse: "wrap-reverse";
 			default: "unknown";
-		}		
-	}	
+		}
+	}
 }
