@@ -293,6 +293,10 @@ class YogaAndroidNewsFeed {
     Assert.floatEquals(21, Yoga.nodeLayoutGetTop(root_child0_child0_child1_child0_child1_child1));
     Assert.floatEquals(0, Yoga.nodeLayoutGetWidth(root_child0_child0_child1_child0_child1_child1));
     Assert.floatEquals(0, Yoga.nodeLayoutGetHeight(root_child0_child0_child1_child0_child1_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
 }

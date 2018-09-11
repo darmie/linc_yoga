@@ -54,6 +54,10 @@ class YogaPercentageSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0));
     Assert.floatEquals(60, Yoga.nodeLayoutGetWidth(root_child0));
     Assert.floatEquals(60, Yoga.nodeLayoutGetHeight(root_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_percentage_position_left_top() {
@@ -93,6 +97,10 @@ class YogaPercentageSpec {
     Assert.floatEquals(80, Yoga.nodeLayoutGetTop(root_child0));
     Assert.floatEquals(180, Yoga.nodeLayoutGetWidth(root_child0));
     Assert.floatEquals(220, Yoga.nodeLayoutGetHeight(root_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_percentage_position_bottom_right() {
@@ -132,6 +140,10 @@ class YogaPercentageSpec {
     Assert.floatEquals(-50, Yoga.nodeLayoutGetTop(root_child0));
     Assert.floatEquals(275, Yoga.nodeLayoutGetWidth(root_child0));
     Assert.floatEquals(75, Yoga.nodeLayoutGetHeight(root_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_percentage_flex_basis() {
@@ -184,6 +196,10 @@ class YogaPercentageSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(75, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(200, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_percentage_flex_basis_cross() {
@@ -235,6 +251,10 @@ class YogaPercentageSpec {
     Assert.floatEquals(125, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(200, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(75, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_percentage_flex_basis_cross_min_height() {
@@ -286,6 +306,10 @@ class YogaPercentageSpec {
     Assert.floatEquals(140, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(200, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(60, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_percentage_flex_basis_main_max_height() {
@@ -340,6 +364,10 @@ class YogaPercentageSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(148, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(40, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_percentage_flex_basis_cross_max_height() {
@@ -393,6 +421,10 @@ class YogaPercentageSpec {
     Assert.floatEquals(120, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(200, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(40, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_percentage_flex_basis_main_max_width() {
@@ -447,6 +479,10 @@ class YogaPercentageSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(40, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(200, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_percentage_flex_basis_cross_max_width() {
@@ -500,6 +536,10 @@ class YogaPercentageSpec {
     Assert.floatEquals(50, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(40, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(150, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_percentage_flex_basis_main_min_width() {
@@ -554,6 +594,10 @@ class YogaPercentageSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(80, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(200, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_percentage_flex_basis_cross_min_width() {
@@ -607,6 +651,10 @@ class YogaPercentageSpec {
     Assert.floatEquals(50, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(200, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(150, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_percentage_multiple_nested_with_padding_margin_and_percentage_values() {
@@ -712,6 +760,10 @@ class YogaPercentageSpec {
     Assert.floatEquals(58, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(200, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(142, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_percentage_margin_should_calculate_based_only_on_width() {
@@ -766,6 +818,10 @@ class YogaPercentageSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0_child0));
     Assert.floatEquals(10, Yoga.nodeLayoutGetWidth(root_child0_child0));
     Assert.floatEquals(10, Yoga.nodeLayoutGetHeight(root_child0_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_percentage_padding_should_calculate_based_only_on_width() {
@@ -820,6 +876,10 @@ class YogaPercentageSpec {
     Assert.floatEquals(20, Yoga.nodeLayoutGetTop(root_child0_child0));
     Assert.floatEquals(10, Yoga.nodeLayoutGetWidth(root_child0_child0));
     Assert.floatEquals(10, Yoga.nodeLayoutGetHeight(root_child0_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_percentage_absolute_position() {
@@ -859,6 +919,10 @@ class YogaPercentageSpec {
     Assert.floatEquals(10, Yoga.nodeLayoutGetTop(root_child0));
     Assert.floatEquals(10, Yoga.nodeLayoutGetWidth(root_child0));
     Assert.floatEquals(10, Yoga.nodeLayoutGetHeight(root_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_percentage_width_height_undefined_parent_size() {
@@ -893,6 +957,10 @@ class YogaPercentageSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0));
     Assert.floatEquals(0, Yoga.nodeLayoutGetWidth(root_child0));
     Assert.floatEquals(0, Yoga.nodeLayoutGetHeight(root_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_percent_within_flex_grow() {
@@ -971,6 +1039,10 @@ class YogaPercentageSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_percentage_container_in_wrapping_container() {
@@ -1053,6 +1125,10 @@ class YogaPercentageSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0_child0_child1));
     Assert.floatEquals(50, Yoga.nodeLayoutGetWidth(root_child0_child0_child1));
     Assert.floatEquals(50, Yoga.nodeLayoutGetHeight(root_child0_child0_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_percent_absolute_position() {
@@ -1120,6 +1196,10 @@ class YogaPercentageSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0_child1));
     Assert.floatEquals(60, Yoga.nodeLayoutGetWidth(root_child0_child1));
     Assert.floatEquals(50, Yoga.nodeLayoutGetHeight(root_child0_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
 }

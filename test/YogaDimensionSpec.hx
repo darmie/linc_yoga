@@ -51,6 +51,10 @@ class YogaDimensionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child0));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_wrap_grandchild() {
@@ -98,6 +102,10 @@ class YogaDimensionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0_child0));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child0_child0));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child0_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
 }

@@ -68,6 +68,10 @@ class YogaDisplaySpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(0, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(0, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_display_none_fixed_size() {
@@ -120,6 +124,10 @@ class YogaDisplaySpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(0, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(0, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_display_none_with_margin() {
@@ -176,6 +184,10 @@ class YogaDisplaySpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_display_none_with_child() {
@@ -264,6 +276,10 @@ class YogaDisplaySpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(50, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_display_none_with_position() {
@@ -316,6 +332,10 @@ class YogaDisplaySpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(0, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(0, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
 }

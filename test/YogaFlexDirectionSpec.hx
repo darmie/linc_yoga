@@ -79,6 +79,10 @@ class YogaFlexDirectionSpec {
     Assert.floatEquals(20, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(10, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_direction_row_no_width() {
@@ -142,6 +146,10 @@ class YogaFlexDirectionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(10, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_direction_column() {
@@ -205,6 +213,10 @@ class YogaFlexDirectionSpec {
     Assert.floatEquals(20, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(10, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_direction_row() {
@@ -269,6 +281,10 @@ class YogaFlexDirectionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(10, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_direction_column_reverse() {
@@ -333,6 +349,10 @@ class YogaFlexDirectionSpec {
     Assert.floatEquals(70, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(10, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_direction_row_reverse() {
@@ -397,6 +417,10 @@ class YogaFlexDirectionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(10, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
 }

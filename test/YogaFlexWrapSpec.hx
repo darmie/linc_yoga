@@ -98,6 +98,10 @@ class YogaFlexWrapSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child3));
     Assert.floatEquals(30, Yoga.nodeLayoutGetWidth(root_child3));
     Assert.floatEquals(30, Yoga.nodeLayoutGetHeight(root_child3));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_wrap_row() {
@@ -180,6 +184,10 @@ class YogaFlexWrapSpec {
     Assert.floatEquals(30, Yoga.nodeLayoutGetTop(root_child3));
     Assert.floatEquals(30, Yoga.nodeLayoutGetWidth(root_child3));
     Assert.floatEquals(30, Yoga.nodeLayoutGetHeight(root_child3));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_wrap_row_align_items_flex_end() {
@@ -263,6 +271,10 @@ class YogaFlexWrapSpec {
     Assert.floatEquals(30, Yoga.nodeLayoutGetTop(root_child3));
     Assert.floatEquals(30, Yoga.nodeLayoutGetWidth(root_child3));
     Assert.floatEquals(30, Yoga.nodeLayoutGetHeight(root_child3));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_wrap_row_align_items_center() {
@@ -346,6 +358,10 @@ class YogaFlexWrapSpec {
     Assert.floatEquals(30, Yoga.nodeLayoutGetTop(root_child3));
     Assert.floatEquals(30, Yoga.nodeLayoutGetWidth(root_child3));
     Assert.floatEquals(30, Yoga.nodeLayoutGetHeight(root_child3));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_wrap_children_with_min_main_overriding_flex_basis() {
@@ -400,6 +416,10 @@ class YogaFlexWrapSpec {
     Assert.floatEquals(50, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(55, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(50, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_wrap_wrap_to_child_height() {
@@ -479,6 +499,10 @@ class YogaFlexWrapSpec {
     Assert.floatEquals(100, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_wrap_align_stretch_fits_one_row() {
@@ -530,6 +554,10 @@ class YogaFlexWrapSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(50, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_wrap_reverse_row_align_content_flex_start() {
@@ -627,6 +655,10 @@ class YogaFlexWrapSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child4));
     Assert.floatEquals(30, Yoga.nodeLayoutGetWidth(root_child4));
     Assert.floatEquals(50, Yoga.nodeLayoutGetHeight(root_child4));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_wrap_reverse_row_align_content_center() {
@@ -725,6 +757,10 @@ class YogaFlexWrapSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child4));
     Assert.floatEquals(30, Yoga.nodeLayoutGetWidth(root_child4));
     Assert.floatEquals(50, Yoga.nodeLayoutGetHeight(root_child4));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_wrap_reverse_row_single_line_different_size() {
@@ -822,6 +858,10 @@ class YogaFlexWrapSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child4));
     Assert.floatEquals(30, Yoga.nodeLayoutGetWidth(root_child4));
     Assert.floatEquals(50, Yoga.nodeLayoutGetHeight(root_child4));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_wrap_reverse_row_align_content_stretch() {
@@ -920,6 +960,10 @@ class YogaFlexWrapSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child4));
     Assert.floatEquals(30, Yoga.nodeLayoutGetWidth(root_child4));
     Assert.floatEquals(50, Yoga.nodeLayoutGetHeight(root_child4));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_wrap_reverse_row_align_content_space_around() {
@@ -1018,6 +1062,10 @@ class YogaFlexWrapSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child4));
     Assert.floatEquals(30, Yoga.nodeLayoutGetWidth(root_child4));
     Assert.floatEquals(50, Yoga.nodeLayoutGetHeight(root_child4));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_wrap_reverse_column_fixed_size() {
@@ -1116,6 +1164,10 @@ class YogaFlexWrapSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child4));
     Assert.floatEquals(30, Yoga.nodeLayoutGetWidth(root_child4));
     Assert.floatEquals(50, Yoga.nodeLayoutGetHeight(root_child4));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_wrapped_row_within_align_items_center() {
@@ -1183,6 +1235,10 @@ class YogaFlexWrapSpec {
     Assert.floatEquals(80, Yoga.nodeLayoutGetTop(root_child0_child1));
     Assert.floatEquals(80, Yoga.nodeLayoutGetWidth(root_child0_child1));
     Assert.floatEquals(80, Yoga.nodeLayoutGetHeight(root_child0_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_wrapped_row_within_align_items_flex_start() {
@@ -1250,6 +1306,10 @@ class YogaFlexWrapSpec {
     Assert.floatEquals(80, Yoga.nodeLayoutGetTop(root_child0_child1));
     Assert.floatEquals(80, Yoga.nodeLayoutGetWidth(root_child0_child1));
     Assert.floatEquals(80, Yoga.nodeLayoutGetHeight(root_child0_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_wrapped_row_within_align_items_flex_end() {
@@ -1317,6 +1377,10 @@ class YogaFlexWrapSpec {
     Assert.floatEquals(80, Yoga.nodeLayoutGetTop(root_child0_child1));
     Assert.floatEquals(80, Yoga.nodeLayoutGetWidth(root_child0_child1));
     Assert.floatEquals(80, Yoga.nodeLayoutGetHeight(root_child0_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_wrapped_column_max_height() {
@@ -1392,6 +1456,10 @@ class YogaFlexWrapSpec {
     Assert.floatEquals(200, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_wrapped_column_max_height_flex() {
@@ -1473,6 +1541,10 @@ class YogaFlexWrapSpec {
     Assert.floatEquals(400, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_wrap_nodes_with_content_sizing_overflowing_margin() {
@@ -1567,6 +1639,10 @@ class YogaFlexWrapSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0_child1_child0));
     Assert.floatEquals(40, Yoga.nodeLayoutGetWidth(root_child0_child1_child0));
     Assert.floatEquals(40, Yoga.nodeLayoutGetHeight(root_child0_child1_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_wrap_nodes_with_content_sizing_margin_cross() {
@@ -1661,6 +1737,10 @@ class YogaFlexWrapSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0_child1_child0));
     Assert.floatEquals(40, Yoga.nodeLayoutGetWidth(root_child0_child1_child0));
     Assert.floatEquals(40, Yoga.nodeLayoutGetHeight(root_child0_child1_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
 }

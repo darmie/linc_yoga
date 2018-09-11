@@ -54,6 +54,10 @@ class YogaAlignSelfSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0));
     Assert.floatEquals(10, Yoga.nodeLayoutGetWidth(root_child0));
     Assert.floatEquals(10, Yoga.nodeLayoutGetHeight(root_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_align_self_flex_end() {
@@ -91,6 +95,10 @@ class YogaAlignSelfSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0));
     Assert.floatEquals(10, Yoga.nodeLayoutGetWidth(root_child0));
     Assert.floatEquals(10, Yoga.nodeLayoutGetHeight(root_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_align_self_flex_start() {
@@ -128,6 +136,10 @@ class YogaAlignSelfSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0));
     Assert.floatEquals(10, Yoga.nodeLayoutGetWidth(root_child0));
     Assert.floatEquals(10, Yoga.nodeLayoutGetHeight(root_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_align_self_flex_end_override_flex_start() {
@@ -166,6 +178,10 @@ class YogaAlignSelfSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0));
     Assert.floatEquals(10, Yoga.nodeLayoutGetWidth(root_child0));
     Assert.floatEquals(10, Yoga.nodeLayoutGetHeight(root_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_align_self_baseline() {
@@ -235,6 +251,10 @@ class YogaAlignSelfSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child1_child0));
     Assert.floatEquals(50, Yoga.nodeLayoutGetWidth(root_child1_child0));
     Assert.floatEquals(10, Yoga.nodeLayoutGetHeight(root_child1_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
 }

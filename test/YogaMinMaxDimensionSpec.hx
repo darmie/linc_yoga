@@ -53,6 +53,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0));
     Assert.floatEquals(50, Yoga.nodeLayoutGetWidth(root_child0));
     Assert.floatEquals(10, Yoga.nodeLayoutGetHeight(root_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_max_height() {
@@ -90,6 +94,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0));
     Assert.floatEquals(10, Yoga.nodeLayoutGetWidth(root_child0));
     Assert.floatEquals(50, Yoga.nodeLayoutGetHeight(root_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_min_height() {
@@ -140,6 +148,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(80, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(20, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_min_width() {
@@ -191,6 +203,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(20, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_justify_content_min_max() {
@@ -229,6 +245,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(20, Yoga.nodeLayoutGetTop(root_child0));
     Assert.floatEquals(60, Yoga.nodeLayoutGetWidth(root_child0));
     Assert.floatEquals(60, Yoga.nodeLayoutGetHeight(root_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_align_items_min_max() {
@@ -267,6 +287,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0));
     Assert.floatEquals(60, Yoga.nodeLayoutGetWidth(root_child0));
     Assert.floatEquals(60, Yoga.nodeLayoutGetHeight(root_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_justify_content_overflow_min_max() {
@@ -334,6 +358,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(80, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(50, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(50, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_grow_to_min() {
@@ -385,6 +413,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(50, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(50, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_grow_in_at_most_container() {
@@ -437,6 +469,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0_child0));
     Assert.floatEquals(0, Yoga.nodeLayoutGetWidth(root_child0_child0));
     Assert.floatEquals(0, Yoga.nodeLayoutGetHeight(root_child0_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_grow_child() {
@@ -473,6 +509,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0));
     Assert.floatEquals(0, Yoga.nodeLayoutGetWidth(root_child0));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_grow_within_constrained_min_max_column() {
@@ -522,6 +562,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(50, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(0, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(50, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_grow_within_max_width() {
@@ -573,6 +617,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0_child0));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child0_child0));
     Assert.floatEquals(20, Yoga.nodeLayoutGetHeight(root_child0_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_grow_within_constrained_max_width() {
@@ -624,6 +672,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0_child0));
     Assert.floatEquals(200, Yoga.nodeLayoutGetWidth(root_child0_child0));
     Assert.floatEquals(20, Yoga.nodeLayoutGetHeight(root_child0_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_root_ignored() {
@@ -676,6 +728,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(200, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_grow_root_minimized() {
@@ -743,6 +799,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(200, Yoga.nodeLayoutGetTop(root_child0_child1));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child0_child1));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child0_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_grow_height_maximized() {
@@ -809,6 +869,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(400, Yoga.nodeLayoutGetTop(root_child0_child1));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child0_child1));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child0_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_grow_within_constrained_min_row() {
@@ -859,6 +923,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(50, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_grow_within_constrained_min_column() {
@@ -907,6 +975,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(50, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(0, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(50, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_grow_within_constrained_max_row() {
@@ -972,6 +1044,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0_child1));
     Assert.floatEquals(50, Yoga.nodeLayoutGetWidth(root_child0_child1));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child0_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_flex_grow_within_constrained_max_column() {
@@ -1022,6 +1098,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(50, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(50, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_child_min_max_width_flexing() {
@@ -1076,6 +1156,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child1));
     Assert.floatEquals(20, Yoga.nodeLayoutGetWidth(root_child1));
     Assert.floatEquals(50, Yoga.nodeLayoutGetHeight(root_child1));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_min_width_overrides_width() {
@@ -1097,6 +1181,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root));
     Assert.floatEquals(0, Yoga.nodeLayoutGetHeight(root));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_max_width_overrides_width() {
@@ -1118,6 +1206,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root));
     Assert.floatEquals(0, Yoga.nodeLayoutGetHeight(root));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_min_height_overrides_height() {
@@ -1139,6 +1231,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root));
     Assert.floatEquals(0, Yoga.nodeLayoutGetWidth(root));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_max_height_overrides_height() {
@@ -1160,6 +1256,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root));
     Assert.floatEquals(0, Yoga.nodeLayoutGetWidth(root));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_min_max_percent_no_width_height() {
@@ -1199,6 +1299,10 @@ class YogaMinMaxDimensionSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0));
     Assert.floatEquals(10, Yoga.nodeLayoutGetWidth(root_child0));
     Assert.floatEquals(10, Yoga.nodeLayoutGetHeight(root_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
 }

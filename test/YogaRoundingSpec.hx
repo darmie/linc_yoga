@@ -81,6 +81,10 @@ class YogaRoundingSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(33, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_rounding_flex_basis_flex_grow_row_prime_number_width() {
@@ -173,6 +177,10 @@ class YogaRoundingSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child4));
     Assert.floatEquals(23, Yoga.nodeLayoutGetWidth(root_child4));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child4));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_rounding_flex_basis_flex_shrink_row() {
@@ -238,6 +246,10 @@ class YogaRoundingSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(25, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(100, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_rounding_flex_basis_overrides_main_size() {
@@ -305,6 +317,10 @@ class YogaRoundingSpec {
     Assert.floatEquals(89, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(24, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_rounding_total_fractial() {
@@ -372,6 +388,10 @@ class YogaRoundingSpec {
     Assert.floatEquals(89, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(87, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(24, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_rounding_total_fractial_nested() {
@@ -473,6 +493,10 @@ class YogaRoundingSpec {
     Assert.floatEquals(89, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(87, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(24, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_rounding_fractial_input_1() {
@@ -540,6 +564,10 @@ class YogaRoundingSpec {
     Assert.floatEquals(89, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(24, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_rounding_fractial_input_2() {
@@ -607,6 +635,10 @@ class YogaRoundingSpec {
     Assert.floatEquals(89, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(25, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_rounding_fractial_input_3() {
@@ -675,6 +707,10 @@ class YogaRoundingSpec {
     Assert.floatEquals(89, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(25, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_rounding_fractial_input_4() {
@@ -743,6 +779,10 @@ class YogaRoundingSpec {
     Assert.floatEquals(89, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(24, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_rounding_inner_node_controversy_horizontal() {
@@ -824,6 +864,10 @@ class YogaRoundingSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(107, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(10, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_rounding_inner_node_controversy_vertical() {
@@ -904,6 +948,10 @@ class YogaRoundingSpec {
     Assert.floatEquals(213, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(10, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(107, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_rounding_inner_node_controversy_combined() {
@@ -1031,6 +1079,10 @@ class YogaRoundingSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child2));
     Assert.floatEquals(213, Yoga.nodeLayoutGetWidth(root_child2));
     Assert.floatEquals(320, Yoga.nodeLayoutGetHeight(root_child2));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
 }

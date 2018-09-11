@@ -66,6 +66,10 @@ class YogaSizeOverflowSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0_child0));
     Assert.floatEquals(200, Yoga.nodeLayoutGetWidth(root_child0_child0));
     Assert.floatEquals(200, Yoga.nodeLayoutGetHeight(root_child0_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_nested_overflowing_child_in_constraint_parent() {
@@ -117,6 +121,10 @@ class YogaSizeOverflowSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0_child0));
     Assert.floatEquals(200, Yoga.nodeLayoutGetWidth(root_child0_child0));
     Assert.floatEquals(200, Yoga.nodeLayoutGetHeight(root_child0_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
   public function test_parent_wrap_child_size_overflowing_parent() {
@@ -167,6 +175,10 @@ class YogaSizeOverflowSpec {
     Assert.floatEquals(0, Yoga.nodeLayoutGetTop(root_child0_child0));
     Assert.floatEquals(100, Yoga.nodeLayoutGetWidth(root_child0_child0));
     Assert.floatEquals(200, Yoga.nodeLayoutGetHeight(root_child0_child0));
+
+    Yoga.nodeFreeRecursive(root);
+
+    Yoga.configFree(config);
   }
 
 }
