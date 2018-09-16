@@ -3,6 +3,10 @@
 
 	<set name="ANDROID" value="1" if="android"/>
 
+	<set name="std" value="c++11" />
+	
+
+	
 	<files id='linc_yoga'>
 		<compilerflag value='-I${LINC_YOGA_PATH}lib/yoga/'/>
 	    <compilerflag value='-I${LINC_YOGA_PATH}linc/'/>
@@ -20,9 +24,10 @@
 	</files>
 
 	<files id='haxe'>
-
 		<compilerflag value='-I${LINC_YOGA_PATH}lib/yoga/'/>
 	    <compilerflag value='-I${LINC_YOGA_PATH}linc/'/>
+		<cppflag value="-std=c++1y" />
+		<compilerflag value="-std=c++1y" />
 		<file name='${LINC_YOGA_PATH}linc/linc_yoga.cpp' />
 		<file name='${LINC_YOGA_PATH}lib/yoga/Yoga.cpp' />	
 		<file name='${LINC_YOGA_PATH}lib/yoga/YGNode.cpp' />
