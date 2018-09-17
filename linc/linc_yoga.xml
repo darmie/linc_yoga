@@ -5,7 +5,10 @@
 
 	<set name="std" value="c++11" />
 	
-
+	<files id="__main__">
+		<compilerflag value='-I${LINC_YOGA_PATH}lib/yoga/'/>
+		<compilerflag value='-I${LINC_YOGA_PATH}linc/'/>
+	</files>
 	
 	<files id='linc_yoga'>
 		<compilerflag value='-I${LINC_YOGA_PATH}lib/yoga/'/>
