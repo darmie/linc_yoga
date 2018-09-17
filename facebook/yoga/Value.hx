@@ -7,7 +7,7 @@ using facebook.yoga.Enums;
 @:include('linc_yoga.h')
 @:native("YGValue")
 extern class Value {
-	public function new() {}
+	// public function new() {} // Extern non-inline function may not have an expression
 	@:native('linc::yoga::setValue')
 	public static function set(value:Float, unit:Unit):Value;
 	@:native("YGValue::value") public var value:Float;
