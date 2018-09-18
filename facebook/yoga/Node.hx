@@ -18,8 +18,8 @@ extern class Node {
 	public function getContext():Dynamic;
 	@:native('getPrintFunc')
 	public function getPrintFunc():PrintFunc;
-	@:native('getHashNewLayout')
-	public function getHashNewLayout():Bool;
+	@:native('getHasNewLayout')
+	public function getHasNewLayout():Bool;
 	@:native('getNodeType')
 	public function getNodeType():NodeType;
 	@:native('getMeasure')
