@@ -1,7 +1,7 @@
 package facebook.yoga;
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:native("YGAlign")
 extern class YGAlign {}
 
@@ -9,7 +9,7 @@ extern class YGAlign {}
  * Align describes align flex attribute
  */
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:enum extern abstract Align(YGAlign) {
 	@:native("YGAlignAuto") var Auto;
 	@:native("YGAlignFlexStart") var FlexStart;
@@ -22,19 +22,19 @@ extern class YGAlign {}
 }
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:native("YGDimension")
 extern class YGDimension {}
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:enum extern abstract Dimension(YGDimension) {
 	@:native("YGDimensionWidth") var Width;
 	@:native("YGDimensionHeight") var Height;
 }
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:native("YGDirection")
 extern class YGDirection {}
 
@@ -42,7 +42,7 @@ extern class YGDirection {}
  * Direction represents right-to-left or left-to-right direction
  */
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:enum extern abstract Direction(YGDirection) {
 	@:native("YGDirectionInherit") var Inherit;
 	@:native("YGDirectionLTR") var LTR;
@@ -50,7 +50,7 @@ extern class YGDirection {}
 }
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:native("YGDisplay")
 extern class YGDisplay {}
 
@@ -58,19 +58,19 @@ extern class YGDisplay {}
  * `display` property
  */
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:enum extern abstract Display(YGDisplay) {
 	@:native("YGDisplayFlex") var Flex;
 	@:native("YGDisplayNone") var None;
 }
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:native("YGEdge")
 extern class YGEdge {}
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:enum extern abstract Edge(YGEdge) {
 	@:native("YGEdgeLeft") var Left;
 	@:native("YGEdgeTop") var Top;
@@ -84,23 +84,23 @@ extern class YGEdge {}
 }
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:native("YGExperimentalFeature")
 extern class YGExperimentalFeature {}
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:enum extern abstract ExperimentalFeature(YGExperimentalFeature) {
 	@:native("YGExperimentalFeatureWebFlexBasis") var WebFlexBasis;
 }
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:native("YGFlexDirection")
 extern class YGFlexDirection {}
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:enum extern abstract FlexDirection(YGFlexDirection) {
 	@:native("YGFlexDirectionColumn") var Column;
 	@:native("YGFlexDirectionColumnReverse") var ColumnReverse;
@@ -109,12 +109,12 @@ extern class YGFlexDirection {}
 }
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:native("YGJustify")
 extern class YGJustify {}
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:enum extern abstract Justify(YGJustify) {
 	@:native("YGJustifyFlexStart") var FlexStart;
 	@:native("YGJustifyFlexEnd") var FlexEnd;
@@ -125,13 +125,13 @@ extern class YGJustify {}
 }
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:native("YGLogLevel")
 extern class YGLogLevel {}
 
 @:keep
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:enum extern abstract LogLevel(YGLogLevel) {
 	@:native("YGLogLevelError") var Error;
 	@:native("YGLogLevelWarn") var Warn;
@@ -142,12 +142,12 @@ extern class YGLogLevel {}
 }
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:native("YGMeasureMode")
 extern class YGMeasureMode {}
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:enum extern abstract MeasureMode(YGMeasureMode) {
 	@:native("YGMeasureModeUndefined") var Undefined;
 	@:native("YGMeasureModeExactly") var Exactly;
@@ -155,24 +155,24 @@ extern class YGMeasureMode {}
 }
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:native("YGNodeType")
 extern class YGNodeType {}
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:enum extern abstract NodeType(YGNodeType) {
 	@:native("YGNodeTypeDefault") var Default;
 	@:native("YGNodeTypeText") var Text;
 }
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:native("YGOverflow")
 extern class YGOverflow {}
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:enum extern abstract Overflow(YGOverflow) {
 	@:native("YGOverflowVisible") var Visible;
 	@:native("YGOverflowHidden") var Hidden;
@@ -180,24 +180,24 @@ extern class YGOverflow {}
 }
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:native("YGPositionType")
 extern class YGPositionType {}
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:enum extern abstract PositionType(YGPositionType) {
 	@:native("YGPositionTypeRelative") var Relative;
 	@:native("YGPositionTypeAbsolute") var Absolute;
 }
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:native("YGPrintOptions")
 extern class YGPrintOptions {}
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:enum extern abstract PrintOptions(YGPrintOptions) {
 	@:native("YGPrintOptionsLayout") var Layout;
 	@:native("YGPrintOptionsStyle") var Style;
@@ -205,12 +205,12 @@ extern class YGPrintOptions {}
 }
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:native("YGUnit")
 extern class YGUnit {}
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:enum extern abstract Unit(YGUnit) {
 	@:native("YGUnitUndefined") var Undefined;
 	@:native("YGUnitPoint") var Point;
@@ -219,12 +219,12 @@ extern class YGUnit {}
 }
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:native("YGWrap")
 extern class YGWrap {}
 
 @:unreflective
-@:include('YGEnums.h')
+@:include('linc_yoga.h')
 @:enum extern abstract FlxWrap(YGWrap) {
 	@:native("YGWrapNoWrap") var NoWrap;
 	@:native("YGWrapWrap") var Wrap;
