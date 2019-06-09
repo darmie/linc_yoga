@@ -6,7 +6,7 @@
 
 -lib utest
 
--D HXCPP_M64
+#-D HXCPP_M64
 
 
 -cmd ./test/cpp/Test
